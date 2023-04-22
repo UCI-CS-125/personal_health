@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		579812B029F477350046AB15 /* Welcoming_WellnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579812AF29F477350046AB15 /* Welcoming_WellnessApp.swift */; };
+		579812B229F477350046AB15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579812B129F477350046AB15 /* ContentView.swift */; };
+		579812B429F477360046AB15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 579812B329F477360046AB15 /* Assets.xcassets */; };
+		579812B729F477360046AB15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 579812B629F477360046AB15 /* Preview Assets.xcassets */; };
+		579812C129F477360046AB15 /* Welcoming_WellnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579812C029F477360046AB15 /* Welcoming_WellnessTests.swift */; };
+		579812CB29F477360046AB15 /* Welcoming_WellnessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579812CA29F477360046AB15 /* Welcoming_WellnessUITests.swift */; };
+		579812CD29F477360046AB15 /* Welcoming_WellnessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579812CC29F477360046AB15 /* Welcoming_WellnessUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		579812BD29F477360046AB15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 579812A429F477350046AB15 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 579812AB29F477350046AB15;
+			remoteInfo = "Welcoming Wellness";
+		};
+		579812C729F477360046AB15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 579812A429F477350046AB15 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 579812AB29F477350046AB15;
+			remoteInfo = "Welcoming Wellness";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		579812AC29F477350046AB15 /* Welcoming Wellness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Welcoming Wellness.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		579812AF29F477350046AB15 /* Welcoming_WellnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcoming_WellnessApp.swift; sourceTree = "<group>"; };
+		579812B129F477350046AB15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		579812B329F477360046AB15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		579812B629F477360046AB15 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		579812BC29F477360046AB15 /* Welcoming WellnessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Welcoming WellnessTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		579812C029F477360046AB15 /* Welcoming_WellnessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcoming_WellnessTests.swift; sourceTree = "<group>"; };
+		579812C629F477360046AB15 /* Welcoming WellnessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Welcoming WellnessUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		579812CA29F477360046AB15 /* Welcoming_WellnessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcoming_WellnessUITests.swift; sourceTree = "<group>"; };
+		579812CC29F477360046AB15 /* Welcoming_WellnessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcoming_WellnessUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		579812A929F477350046AB15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579812B929F477360046AB15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579812C329F477360046AB15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		579812A329F477350046AB15 = {
+			isa = PBXGroup;
+			children = (
+				579812AE29F477350046AB15 /* Welcoming Wellness */,
+				579812BF29F477360046AB15 /* Welcoming WellnessTests */,
+				579812C929F477360046AB15 /* Welcoming WellnessUITests */,
+				579812AD29F477350046AB15 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		579812AD29F477350046AB15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				579812AC29F477350046AB15 /* Welcoming Wellness.app */,
+				579812BC29F477360046AB15 /* Welcoming WellnessTests.xctest */,
+				579812C629F477360046AB15 /* Welcoming WellnessUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		579812AE29F477350046AB15 /* Welcoming Wellness */ = {
+			isa = PBXGroup;
+			children = (
+				579812AF29F477350046AB15 /* Welcoming_WellnessApp.swift */,
+				579812B129F477350046AB15 /* ContentView.swift */,
+				579812B329F477360046AB15 /* Assets.xcassets */,
+				579812B529F477360046AB15 /* Preview Content */,
+			);
+			path = "Welcoming Wellness";
+			sourceTree = "<group>";
+		};
+		579812B529F477360046AB15 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				579812B629F477360046AB15 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		579812BF29F477360046AB15 /* Welcoming WellnessTests */ = {
+			isa = PBXGroup;
+			children = (
+				579812C029F477360046AB15 /* Welcoming_WellnessTests.swift */,
+			);
+			path = "Welcoming WellnessTests";
+			sourceTree = "<group>";
+		};
+		579812C929F477360046AB15 /* Welcoming WellnessUITests */ = {
+			isa = PBXGroup;
+			children = (
+				579812CA29F477360046AB15 /* Welcoming_WellnessUITests.swift */,
+				579812CC29F477360046AB15 /* Welcoming_WellnessUITestsLaunchTests.swift */,
+			);
+			path = "Welcoming WellnessUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		579812AB29F477350046AB15 /* Welcoming Wellness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 579812D029F477360046AB15 /* Build configuration list for PBXNativeTarget "Welcoming Wellness" */;
+			buildPhases = (
+				579812A829F477350046AB15 /* Sources */,
+				579812A929F477350046AB15 /* Frameworks */,
+				579812AA29F477350046AB15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Welcoming Wellness";
+			productName = "Welcoming Wellness";
+			productReference = 579812AC29F477350046AB15 /* Welcoming Wellness.app */;
+			productType = "com.apple.product-type.application";
+		};
+		579812BB29F477360046AB15 /* Welcoming WellnessTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 579812D329F477360046AB15 /* Build configuration list for PBXNativeTarget "Welcoming WellnessTests" */;
+			buildPhases = (
+				579812B829F477360046AB15 /* Sources */,
+				579812B929F477360046AB15 /* Frameworks */,
+				579812BA29F477360046AB15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				579812BE29F477360046AB15 /* PBXTargetDependency */,
+			);
+			name = "Welcoming WellnessTests";
+			productName = "Welcoming WellnessTests";
+			productReference = 579812BC29F477360046AB15 /* Welcoming WellnessTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		579812C529F477360046AB15 /* Welcoming WellnessUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 579812D629F477360046AB15 /* Build configuration list for PBXNativeTarget "Welcoming WellnessUITests" */;
+			buildPhases = (
+				579812C229F477360046AB15 /* Sources */,
+				579812C329F477360046AB15 /* Frameworks */,
+				579812C429F477360046AB15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				579812C829F477360046AB15 /* PBXTargetDependency */,
+			);
+			name = "Welcoming WellnessUITests";
+			productName = "Welcoming WellnessUITests";
+			productReference = 579812C629F477360046AB15 /* Welcoming WellnessUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		579812A429F477350046AB15 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					579812AB29F477350046AB15 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					579812BB29F477360046AB15 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 579812AB29F477350046AB15;
+					};
+					579812C529F477360046AB15 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 579812AB29F477350046AB15;
+					};
+				};
+			};
+			buildConfigurationList = 579812A729F477350046AB15 /* Build configuration list for PBXProject "Welcoming Wellness" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 579812A329F477350046AB15;
+			productRefGroup = 579812AD29F477350046AB15 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				579812AB29F477350046AB15 /* Welcoming Wellness */,
+				579812BB29F477360046AB15 /* Welcoming WellnessTests */,
+				579812C529F477360046AB15 /* Welcoming WellnessUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		579812AA29F477350046AB15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				579812B729F477360046AB15 /* Preview Assets.xcassets in Resources */,
+				579812B429F477360046AB15 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579812BA29F477360046AB15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579812C429F477360046AB15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		579812A829F477350046AB15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				579812B229F477350046AB15 /* ContentView.swift in Sources */,
+				579812B029F477350046AB15 /* Welcoming_WellnessApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579812B829F477360046AB15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				579812C129F477360046AB15 /* Welcoming_WellnessTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579812C229F477360046AB15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				579812CB29F477360046AB15 /* Welcoming_WellnessUITests.swift in Sources */,
+				579812CD29F477360046AB15 /* Welcoming_WellnessUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		579812BE29F477360046AB15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 579812AB29F477350046AB15 /* Welcoming Wellness */;
+			targetProxy = 579812BD29F477360046AB15 /* PBXContainerItemProxy */;
+		};
+		579812C829F477360046AB15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 579812AB29F477350046AB15 /* Welcoming Wellness */;
+			targetProxy = 579812C729F477360046AB15 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		579812CE29F477360046AB15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		579812CF29F477360046AB15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		579812D129F477360046AB15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Welcoming Wellness/Preview Content\"";
+				DEVELOPMENT_TEAM = J84RJL837B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jason.Welcoming-Wellness";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		579812D229F477360046AB15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Welcoming Wellness/Preview Content\"";
+				DEVELOPMENT_TEAM = J84RJL837B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jason.Welcoming-Wellness";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		579812D429F477360046AB15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J84RJL837B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jason.Welcoming-WellnessTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Welcoming Wellness.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Welcoming Wellness";
+			};
+			name = Debug;
+		};
+		579812D529F477360046AB15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J84RJL837B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jason.Welcoming-WellnessTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Welcoming Wellness.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Welcoming Wellness";
+			};
+			name = Release;
+		};
+		579812D729F477360046AB15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J84RJL837B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jason.Welcoming-WellnessUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Welcoming Wellness";
+			};
+			name = Debug;
+		};
+		579812D829F477360046AB15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J84RJL837B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jason.Welcoming-WellnessUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Welcoming Wellness";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		579812A729F477350046AB15 /* Build configuration list for PBXProject "Welcoming Wellness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				579812CE29F477360046AB15 /* Debug */,
+				579812CF29F477360046AB15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		579812D029F477360046AB15 /* Build configuration list for PBXNativeTarget "Welcoming Wellness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				579812D129F477360046AB15 /* Debug */,
+				579812D229F477360046AB15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		579812D329F477360046AB15 /* Build configuration list for PBXNativeTarget "Welcoming WellnessTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				579812D429F477360046AB15 /* Debug */,
+				579812D529F477360046AB15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		579812D629F477360046AB15 /* Build configuration list for PBXNativeTarget "Welcoming WellnessUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				579812D729F477360046AB15 /* Debug */,
+				579812D829F477360046AB15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 579812A429F477350046AB15 /* Project object */;
+}
