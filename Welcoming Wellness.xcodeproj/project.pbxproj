@@ -14,6 +14,7 @@
 		579812C129F477360046AB15 /* Welcoming_WellnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579812C029F477360046AB15 /* Welcoming_WellnessTests.swift */; };
 		579812CB29F477360046AB15 /* Welcoming_WellnessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579812CA29F477360046AB15 /* Welcoming_WellnessUITests.swift */; };
 		579812CD29F477360046AB15 /* Welcoming_WellnessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579812CC29F477360046AB15 /* Welcoming_WellnessUITestsLaunchTests.swift */; };
+		579812DD29F4778F0046AB15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579812DC29F4778F0046AB15 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		579812C629F477360046AB15 /* Welcoming WellnessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Welcoming WellnessUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		579812CA29F477360046AB15 /* Welcoming_WellnessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcoming_WellnessUITests.swift; sourceTree = "<group>"; };
 		579812CC29F477360046AB15 /* Welcoming_WellnessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcoming_WellnessUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		579812DC29F4778F0046AB15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +96,15 @@
 		579812AE29F477350046AB15 /* Welcoming Wellness */ = {
 			isa = PBXGroup;
 			children = (
+				579812DE29F477D30046AB15 /* Models */,
+				579812DB29F477540046AB15 /* ViewControllers */,
+				579812DA29F4774B0046AB15 /* Views */,
+				579812D929F477430046AB15 /* Assets */,
 				579812AF29F477350046AB15 /* Welcoming_WellnessApp.swift */,
 				579812B129F477350046AB15 /* ContentView.swift */,
 				579812B329F477360046AB15 /* Assets.xcassets */,
 				579812B529F477360046AB15 /* Preview Content */,
+				579812DC29F4778F0046AB15 /* AppDelegate.swift */,
 			);
 			path = "Welcoming Wellness";
 			sourceTree = "<group>";
@@ -125,6 +132,34 @@
 				579812CC29F477360046AB15 /* Welcoming_WellnessUITestsLaunchTests.swift */,
 			);
 			path = "Welcoming WellnessUITests";
+			sourceTree = "<group>";
+		};
+		579812D929F477430046AB15 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		579812DA29F4774B0046AB15 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		579812DB29F477540046AB15 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		579812DE29F477D30046AB15 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				579812DD29F4778F0046AB15 /* AppDelegate.swift in Sources */,
 				579812B229F477350046AB15 /* ContentView.swift in Sources */,
 				579812B029F477350046AB15 /* Welcoming_WellnessApp.swift in Sources */,
 			);
