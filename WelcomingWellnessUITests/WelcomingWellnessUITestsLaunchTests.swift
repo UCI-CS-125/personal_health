@@ -1,13 +1,13 @@
 //
-//  Welcoming_WellnessUITestsLaunchTests.swift
-//  Welcoming WellnessUITests
+//  WelcomingWellnessUITestsLaunchTests.swift
+//  WelcomingWellnessUITests
 //
 //  Created by Jason Wong on 4/22/23.
 //
 
 import XCTest
 
-final class Welcoming_WellnessUITestsLaunchTests: XCTestCase {
+final class WelcomingWellnessUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

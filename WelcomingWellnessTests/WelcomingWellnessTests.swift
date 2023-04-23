@@ -1,14 +1,14 @@
 //
-//  Welcoming_WellnessTests.swift
-//  Welcoming WellnessTests
+//  WelcomingWellnessTests.swift
+//  WelcomingWellnessTests
 //
 //  Created by Jason Wong on 4/22/23.
 //
 
 import XCTest
-@testable import Welcoming_Wellness
+@testable import WelcomingWellness
 
-final class Welcoming_WellnessTests: XCTestCase {
+final class WelcomingWellnessTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
