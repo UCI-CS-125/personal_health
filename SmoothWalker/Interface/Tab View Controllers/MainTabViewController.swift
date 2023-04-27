@@ -27,10 +27,11 @@ class MainTabViewController: UITabBarController {
     
     func setUpTabViewController() {
         let viewControllers = [
-            createWelcomeViewController(),
-            createWeeklyQuantitySampleTableViewController(),
-            createChartViewController(),
-            createWeeklyReportViewController()
+            createProfileViewController(),
+            createLifestyleScoreViewController(),
+            createExerciseViewController(),
+            createSleepViewController(),
+            createDietViewController()
         ]
         
         self.viewControllers = viewControllers.map {
@@ -41,38 +42,49 @@ class MainTabViewController: UITabBarController {
         selectedIndex = getLastViewedViewControllerIndex()
     }
     
-    private func createWelcomeViewController() -> UIViewController {
+    private func createProfileViewController() -> UIViewController {
         let viewController = WelcomeViewController()
         
-        viewController.tabBarItem = UITabBarItem(title: "Welcome",
+        viewController.tabBarItem = UITabBarItem(title: "Profile",
                                                  image: UIImage(systemName: "circle"),
                                                  selectedImage: UIImage(systemName: "circle.fill"))
         return viewController
     }
     
-    private func createWeeklyQuantitySampleTableViewController() -> UIViewController {
+    private func createLifestyleScoreViewController() -> UIViewController {
         let dataTypeIdentifier = HKQuantityTypeIdentifier.stepCount.rawValue
         let viewController = WeeklyQuantitySampleTableViewController(dataTypeIdentifier: dataTypeIdentifier)
         
-        viewController.tabBarItem = UITabBarItem(title: "Health Data",
+        viewController.tabBarItem = UITabBarItem(title: "Lifestyle Score",
                                                  image: UIImage(systemName: "triangle"),
                                                  selectedImage: UIImage(systemName: "triangle.fill"))
         return viewController
     }
     
-    private func createChartViewController() -> UIViewController {
-        let viewController = MobilityChartDataViewController()
+    private func createExerciseViewController() -> UIViewController {
+//        let viewController = MobilityChartDataViewController()
+        let dataTypeIdentifier = HKQuantityTypeIdentifier.stepCount.rawValue
+        let viewController = WeeklyQuantitySampleTableViewController(dataTypeIdentifier: dataTypeIdentifier)
         
-        viewController.tabBarItem = UITabBarItem(title: "Charts",
+        viewController.tabBarItem = UITabBarItem(title: "Exercise",
                                                  image: UIImage(systemName: "square"),
                                                  selectedImage: UIImage(systemName: "square.fill"))
         return viewController
     }
     
-    private func createWeeklyReportViewController() -> UIViewController {
+    private func createSleepViewController() -> UIViewController {
         let viewController = WeeklyReportTableViewController()
         
-        viewController.tabBarItem = UITabBarItem(title: "Weekly Report",
+        viewController.tabBarItem = UITabBarItem(title: "Sleep",
+                                                 image: UIImage(systemName: "star"),
+                                                 selectedImage: UIImage(systemName: "star.fill"))
+        return viewController
+    }
+    
+    private func createDietViewController() -> UIViewController {
+        let viewController = WeeklyReportTableViewController()
+        
+        viewController.tabBarItem = UITabBarItem(title: "Diet",
                                                  image: UIImage(systemName: "star"),
                                                  selectedImage: UIImage(systemName: "star.fill"))
         return viewController
@@ -104,3 +116,4 @@ extension MainTabViewController: UITabBarControllerDelegate {
         userDefaults.set(index, forKey: Self.lastViewControllerViewed)
     }
 }
+
