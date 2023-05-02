@@ -64,8 +64,8 @@ class MainTabViewController: UITabBarController {
     private func createExerciseViewController() -> UIViewController {
 //        let viewController = MobilityChartDataViewController()
         let dataTypeIdentifier = HKQuantityTypeIdentifier.stepCount.rawValue
-        let viewController = WeeklyQuantitySampleTableViewController(dataTypeIdentifier: dataTypeIdentifier)
-//        let viewController = Exercise()
+//        let viewController = WeeklyQuantitySampleTableViewController(dataTypeIdentifier: dataTypeIdentifier)
+        let viewController = ExerciseViewController()
         
         viewController.tabBarItem = UITabBarItem(title: "Exercise",
                                                  image: UIImage(systemName: "square"),

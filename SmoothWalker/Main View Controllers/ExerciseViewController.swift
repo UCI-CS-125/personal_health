@@ -10,9 +10,12 @@ import UIKit
 
 class ExerciseViewController: UIViewController {
 
+//    @IBOutlet weak var titleLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = tabBarItem.title
+        view.backgroundColor = .systemBackground
         // Do any additional setup after loading the view.
     }
     
