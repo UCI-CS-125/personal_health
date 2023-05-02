@@ -65,6 +65,7 @@ class MainTabViewController: UITabBarController {
 //        let viewController = MobilityChartDataViewController()
         let dataTypeIdentifier = HKQuantityTypeIdentifier.stepCount.rawValue
         let viewController = WeeklyQuantitySampleTableViewController(dataTypeIdentifier: dataTypeIdentifier)
+//        let viewController = Exercise()
         
         viewController.tabBarItem = UITabBarItem(title: "Exercise",
                                                  image: UIImage(systemName: "square"),
@@ -86,7 +87,7 @@ class MainTabViewController: UITabBarController {
         
         viewController.tabBarItem = UITabBarItem(title: "Diet",
                                                  image: UIImage(systemName: "star"),
-                                                 selectedImage: UIImage(systemName: "star.fill"))
+                                                 selectedImage: UIImage(systemName: "heart.fill"))
         return viewController
     }
     
