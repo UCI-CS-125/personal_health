@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5582FAE42A00AD6800C2D9DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5582FAE32A00AD6800C2D9DF /* Main.storyboard */; };
 		5582FAE62A00B47700C2D9DF /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582FAE52A00B47700C2D9DF /* ExerciseViewController.swift */; };
 		5582FAE82A00DE5E00C2D9DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5582FAE72A00DE5D00C2D9DF /* Assets.xcassets */; };
+		5757C5B72A020534005F2D93 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5757C5B62A020534005F2D93 /* ProfileViewController.swift */; };
 		EB12722B24859C1600548CD1 /* DataTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12722A24859C1600548CD1 /* DataTypeTableViewCell.swift */; };
 		EB12722D2485BA9400548CD1 /* HealthDataTypeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12722C2485BA9400548CD1 /* HealthDataTypeValue.swift */; };
 		EB12722F2485C83E00548CD1 /* EmptyDataBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12722E2485C83E00548CD1 /* EmptyDataBackgroundView.swift */; };
@@ -47,6 +48,7 @@
 		5582FAE32A00AD6800C2D9DF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5582FAE52A00B47700C2D9DF /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		5582FAE72A00DE5D00C2D9DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5757C5B62A020534005F2D93 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8037822B27C5C24067AC1EBF /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		DDC3EAD6D9404AADDCC92FF8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EB12722A24859C1600548CD1 /* DataTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypeTableViewCell.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				EB644F9E24730E2B00CF27F0 /* MobilityChartDataViewController.swift */,
 				EB9525BB2474C930001B5178 /* WeeklyReportTableViewController.swift */,
 				5582FAE52A00B47700C2D9DF /* ExerciseViewController.swift */,
+				5757C5B62A020534005F2D93 /* ProfileViewController.swift */,
 			);
 			name = "View Controllers";
 			path = "Main View Controllers";
@@ -311,8 +314,9 @@
 		F9907AE72458947B00987667 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1430;
 				ORGANIZATIONNAME = Apple;
 				TargetAttributes = {
 					F9907AEE2458947C00987667 = {
@@ -368,6 +372,7 @@
 				EB9525BA2474C8F2001B5178 /* ChartTableViewController.swift in Sources */,
 				EB644FA1247311DF00CF27F0 /* Network.swift in Sources */,
 				EB12722F2485C83E00548CD1 /* EmptyDataBackgroundView.swift in Sources */,
+				5757C5B72A020534005F2D93 /* ProfileViewController.swift in Sources */,
 				EB9525B52474C282001B5178 /* HealthDataTableViewController.swift in Sources */,
 				EB305B7C2485D99B007A7694 /* HealthQueryTableViewController.swift in Sources */,
 				EB305B7E2485E4B8007A7694 /* HealthKitSupport+Strings.swift in Sources */,
@@ -538,8 +543,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SmoothWalker/Supporting Files/SmoothWalker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z99RHNG9DQ;
+				DEVELOPMENT_TEAM = J84RJL837B;
 				INFOPLIST_FILE = "SmoothWalker/Supporting Files/Info.plist";
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -561,8 +567,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SmoothWalker/Supporting Files/SmoothWalker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z99RHNG9DQ;
+				DEVELOPMENT_TEAM = J84RJL837B;
 				INFOPLIST_FILE = "SmoothWalker/Supporting Files/Info.plist";
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
