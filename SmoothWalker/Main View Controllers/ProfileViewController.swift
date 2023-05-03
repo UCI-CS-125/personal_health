@@ -10,9 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    
-    @IBOutlet weak var ProfileImageView: UIImageView!
-        
+            
     override func viewDidLoad() {
         super.viewDidLoad()
         title = tabBarItem.title
