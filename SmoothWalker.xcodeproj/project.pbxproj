@@ -11,6 +11,8 @@
 		5582FAE62A00B47700C2D9DF /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582FAE52A00B47700C2D9DF /* ExerciseViewController.swift */; };
 		5582FAE82A00DE5E00C2D9DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5582FAE72A00DE5D00C2D9DF /* Assets.xcassets */; };
 		5757C5B72A020534005F2D93 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5757C5B62A020534005F2D93 /* ProfileViewController.swift */; };
+		DF50A2CA2A031276001037D5 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50A2C92A031276001037D5 /* DashboardViewController.swift */; };
+		DF50A2CC2A0316B9001037D5 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50A2CB2A0316B9001037D5 /* CircularProgressView.swift */; };
 		EB12722B24859C1600548CD1 /* DataTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12722A24859C1600548CD1 /* DataTypeTableViewCell.swift */; };
 		EB12722D2485BA9400548CD1 /* HealthDataTypeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12722C2485BA9400548CD1 /* HealthDataTypeValue.swift */; };
 		EB12722F2485C83E00548CD1 /* EmptyDataBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12722E2485C83E00548CD1 /* EmptyDataBackgroundView.swift */; };
@@ -51,6 +53,8 @@
 		5757C5B62A020534005F2D93 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8037822B27C5C24067AC1EBF /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		DDC3EAD6D9404AADDCC92FF8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DF50A2C92A031276001037D5 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		DF50A2CB2A0316B9001037D5 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		EB12722A24859C1600548CD1 /* DataTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypeTableViewCell.swift; sourceTree = "<group>"; };
 		EB12722C2485BA9400548CD1 /* HealthDataTypeValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataTypeValue.swift; sourceTree = "<group>"; };
 		EB12722E2485C83E00548CD1 /* EmptyDataBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataBackgroundView.swift; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 				EB644F9E24730E2B00CF27F0 /* MobilityChartDataViewController.swift */,
 				EB9525BB2474C930001B5178 /* WeeklyReportTableViewController.swift */,
 				5582FAE52A00B47700C2D9DF /* ExerciseViewController.swift */,
+				DF50A2C92A031276001037D5 /* DashboardViewController.swift */,
+				DF50A2CB2A0316B9001037D5 /* CircularProgressView.swift */,
 				5757C5B62A020534005F2D93 /* ProfileViewController.swift */,
 			);
 			name = "View Controllers";
@@ -381,6 +387,7 @@
 				EB9525C22475BD41001B5178 /* HealthKitSupport.swift in Sources */,
 				EB9525BC2474C930001B5178 /* WeeklyReportTableViewController.swift in Sources */,
 				EBEF213C2462289B0055F482 /* FeedItemCollectionViewCell.swift in Sources */,
+				DF50A2CA2A031276001037D5 /* DashboardViewController.swift in Sources */,
 				F9907AF32458947C00987667 /* AppDelegate.swift in Sources */,
 				F9907AF52458947C00987667 /* SceneDelegate.swift in Sources */,
 				EB9525B72474C396001B5178 /* WeeklyDataTableViewController.swift in Sources */,
@@ -389,6 +396,7 @@
 				EB326B4E246B16AD00FEFD08 /* MainTabViewController.swift in Sources */,
 				EB48C1CA246B3A0300AE8FE3 /* ChartViewStyle.swift in Sources */,
 				EB48C1C4246B351C00AE8FE3 /* CareKitSupport.swift in Sources */,
+				DF50A2CC2A0316B9001037D5 /* CircularProgressView.swift in Sources */,
 				EB644F9F24730E2B00CF27F0 /* MobilityChartDataViewController.swift in Sources */,
 				EB9525C02474C9C2001B5178 /* WelcomeViewController.swift in Sources */,
 				5582FAE62A00B47700C2D9DF /* ExerciseViewController.swift in Sources */,

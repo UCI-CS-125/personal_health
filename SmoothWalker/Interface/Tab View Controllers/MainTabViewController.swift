@@ -28,7 +28,7 @@ class MainTabViewController: UITabBarController {
     func setUpTabViewController() {
         let viewControllers = [
             createProfileViewController(),
-            createLifestyleScoreViewController(),
+            createDashboardScoreViewController(),
             createExerciseViewController(),
             createSleepViewController(),
             createDietViewController()
@@ -51,11 +51,12 @@ class MainTabViewController: UITabBarController {
         return viewController
     }
     
-    private func createLifestyleScoreViewController() -> UIViewController {
+    private func createDashboardScoreViewController() -> UIViewController {
         let dataTypeIdentifier = HKQuantityTypeIdentifier.stepCount.rawValue
-        let viewController = WeeklyQuantitySampleTableViewController(dataTypeIdentifier: dataTypeIdentifier)
+        //let viewController = WeeklyQuantitySampleTableViewController(dataTypeIdentifier: dataTypeIdentifier)
         
-        viewController.tabBarItem = UITabBarItem(title: "Lifestyle Score",
+        let viewController = DashboardViewController()
+        viewController.tabBarItem = UITabBarItem(title: "Dashboard",
                                                  image: UIImage(systemName: "triangle"),
                                                  selectedImage: UIImage(systemName: "triangle.fill"))
         return viewController

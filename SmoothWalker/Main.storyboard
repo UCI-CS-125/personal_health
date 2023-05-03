@@ -202,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPO-Pw-xlY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="580" y="217"/>
+            <point key="canvasLocation" x="1489.8550724637682" y="216.96428571428569"/>
         </scene>
         <!--Profile & BMI-->
         <scene sceneID="sjD-Ch-mHN">
@@ -500,11 +500,54 @@
                         <segue destination="lRg-gw-6CS" kind="relationship" relationship="viewControllers" id="UzJ-ly-j7m"/>
                         <segue destination="hyw-dU-PTQ" kind="relationship" relationship="viewControllers" id="rwQ-MX-vt9"/>
                         <segue destination="9Gb-VW-OM2" kind="relationship" relationship="viewControllers" id="6hu-Hy-ORl"/>
+                        <segue destination="8xc-hc-n9e" kind="relationship" relationship="viewControllers" id="bgC-bt-21z"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mxx-DX-BGh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3141" y="-397"/>
+        </scene>
+        <!-- My Lifestyle Score-->
+        <scene sceneID="Njh-jv-AWW">
+            <objects>
+                <viewController id="bW0-Jd-3ar" customClass="DashboardViewController" customModule="SmoothWalker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pwF-BU-H8D">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today's Recommendations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6x-eS-X3t">
+                                <rect key="frame" x="20" y="431" width="344" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="- List begins here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lI-Qu-fKE">
+                                <rect key="frame" x="20" y="473" width="159" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtO-dN-Cq5">
+                                <rect key="frame" x="182" y="234" width="85" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KaM-77-hqb"/>
+                        <color key="backgroundColor" red="0.73096288839149848" green="0.90935029914423393" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title=" My Lifestyle Score" id="mdY-hr-27o"/>
+                    <connections>
+                        <outlet property="animatedCountingLabel" destination="YtO-dN-Cq5" id="oJe-5J-08w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZsU-r0-Y7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1281.1594202898552" y="531.69642857142856"/>
         </scene>
         <!--Item-->
         <scene sceneID="RDR-Uo-h6l">
@@ -555,7 +598,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="war-fu-7LB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1313" y="161"/>
+            <point key="canvasLocation" x="-402.89855072463769" y="160.71428571428569"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="ngl-Wm-Cl6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8xc-hc-n9e" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="2Wr-7o-QgZ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="fAZ-yk-zb4">
+                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bW0-Jd-3ar" kind="relationship" relationship="rootViewController" id="IxM-6d-SRx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AiR-V1-yFB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2191.304347826087" y="531.69642857142856"/>
         </scene>
     </scenes>
     <resources>
