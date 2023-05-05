@@ -75,7 +75,7 @@ class MainTabViewController: UITabBarController {
     }
     
     private func createSleepViewController() -> UIViewController {
-        let viewController = WeeklyReportTableViewController()
+        let viewController = SleepViewController()
         
         viewController.tabBarItem = UITabBarItem(title: "Sleep",
                                                  image: UIImage(systemName: "star"),
