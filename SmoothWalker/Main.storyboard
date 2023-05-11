@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -534,7 +535,9 @@
         <scene sceneID="RDR-Uo-h6l">
             <objects>
                 <navigationController id="lRg-gw-6CS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="uvS-gw-GO9"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="uvS-gw-GO9">
+                        <imageReference key="selectedImage" image="person.crop.circle" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kf9-2T-c1R">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -551,7 +554,9 @@
         <scene sceneID="eZt-M8-z3s">
             <objects>
                 <navigationController id="hyw-dU-PTQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="sIz-3N-bzf"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="sIz-3N-bzf">
+                        <imageReference key="selectedImage" image="figure.run" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="L1e-vF-ZhS">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -568,7 +573,9 @@
         <scene sceneID="oZh-pM-1qQ">
             <objects>
                 <navigationController id="9Gb-VW-OM2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="zaz-FO-LW9"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="zaz-FO-LW9">
+                        <imageReference key="selectedImage" image="bed.double" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2bu-Dx-LFU">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -585,7 +592,9 @@
         <scene sceneID="ngl-Wm-Cl6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8xc-hc-n9e" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2Wr-7o-QgZ"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="2Wr-7o-QgZ">
+                        <imageReference key="selectedImage" image="checklist" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="fAZ-yk-zb4">
                         <rect key="frame" x="0.0" y="48" width="414" height="96"/>
@@ -602,11 +611,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bed.double" catalog="system" width="128" height="82"/>
+        <image name="checklist" catalog="system" width="128" height="107"/>
         <image name="checkmark" width="800" height="800"/>
         <image name="empty circle" width="1000" height="1080"/>
         <image name="example sleep bar graph" width="663" height="735"/>
         <image name="example smileys" width="526" height="127"/>
+        <image name="figure.run" catalog="system" width="115" height="128"/>
         <image name="heartrate temp" width="354" height="320"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
