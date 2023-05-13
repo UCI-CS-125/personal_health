@@ -12,11 +12,22 @@ class ExerciseViewController: UIViewController {
 
 //    @IBOutlet weak var titleLabel: UILabel!
     
+    enum Segues {
+        static let toExerciseFirstChild = "ToExerciseFirstChildVC"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = tabBarItem.title
         view.backgroundColor = .systemBackground
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segues.toExerciseFirstChild {
+            let destVC = segue.destination as! ExerciseFirstChildVC
+            destVC.view.backgroundColor = .blue
+        }
     }
     
 

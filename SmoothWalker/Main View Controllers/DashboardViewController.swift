@@ -28,7 +28,7 @@ class DashboardViewController: UIViewController {
         circularProgressBarView = CircularProgressView(frame: .zero)
         // align to the center of the screen
         //circularProgressBarView.center = view.center
-        circularProgressBarView.frame = CGRectMake( 200, 250, view.frame.size.width, view.frame.size.height )
+        circularProgressBarView.frame = CGRect(x: 200, y: 250, width: view.frame.size.width, height: view.frame.size.height )
         // call the animation with circularViewDuration
         circularProgressBarView.progressAnimation(duration: circularViewDuration, toValue: circularViewProgress)
         // add this view to the view controller
