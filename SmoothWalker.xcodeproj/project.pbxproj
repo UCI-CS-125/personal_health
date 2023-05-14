@@ -14,6 +14,7 @@
 		5582FAE82A00DE5E00C2D9DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5582FAE72A00DE5D00C2D9DF /* Assets.xcassets */; };
 		5724EB992A105D5C0036150A /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724EB982A105D5C0036150A /* PermissionViewController.swift */; };
 		5724EB9B2A105D630036150A /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724EB9A2A105D630036150A /* TabViewController.swift */; };
+		5724EB9D2A105DB60036150A /* Main_Interaction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5724EB9C2A105DB60036150A /* Main_Interaction.storyboard */; };
 		5757C5B72A020534005F2D93 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5757C5B62A020534005F2D93 /* ProfileViewController.swift */; };
 		7ACCFEC82A031A4600F255FF /* ViewSleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACCFEC72A031A4600F255FF /* ViewSleep.swift */; };
 		7ACCFECA2A04BB8D00F255FF /* SleepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACCFEC92A04BB8D00F255FF /* SleepViewController.swift */; };
@@ -60,6 +61,7 @@
 		5582FAE72A00DE5D00C2D9DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5724EB982A105D5C0036150A /* PermissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
 		5724EB9A2A105D630036150A /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		5724EB9C2A105DB60036150A /* Main_Interaction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main_Interaction.storyboard; sourceTree = "<group>"; };
 		5757C5B62A020534005F2D93 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7ACCFEC72A031A4600F255FF /* ViewSleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSleep.swift; sourceTree = "<group>"; };
 		7ACCFEC92A04BB8D00F255FF /* SleepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepViewController.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 				EB326B53246B258000FEFD08 /* Supporting Files */,
 				F9907AFD2458947D00987667 /* LaunchScreen.storyboard */,
 				5582FAE32A00AD6800C2D9DF /* Main.storyboard */,
+				5724EB9C2A105DB60036150A /* Main_Interaction.storyboard */,
 			);
 			path = SmoothWalker;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				5582FAE42A00AD6800C2D9DF /* Main.storyboard in Resources */,
 				F9907AFF2458947D00987667 /* LaunchScreen.storyboard in Resources */,
 				EB9525B324735827001B5178 /* MockServerResponse.json in Resources */,
+				5724EB9D2A105DB60036150A /* Main_Interaction.storyboard in Resources */,
 				5582FAE82A00DE5E00C2D9DF /* Assets.xcassets in Resources */,
 				F9907AFC2458947D00987667 /* Assets.xcassets in Resources */,
 			);
