@@ -12,6 +12,8 @@
 		5582FAE42A00AD6800C2D9DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5582FAE32A00AD6800C2D9DF /* Main.storyboard */; };
 		5582FAE62A00B47700C2D9DF /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582FAE52A00B47700C2D9DF /* ExerciseViewController.swift */; };
 		5582FAE82A00DE5E00C2D9DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5582FAE72A00DE5D00C2D9DF /* Assets.xcassets */; };
+		5724EB992A105D5C0036150A /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724EB982A105D5C0036150A /* PermissionViewController.swift */; };
+		5724EB9B2A105D630036150A /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724EB9A2A105D630036150A /* TabViewController.swift */; };
 		5757C5B72A020534005F2D93 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5757C5B62A020534005F2D93 /* ProfileViewController.swift */; };
 		7ACCFEC82A031A4600F255FF /* ViewSleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACCFEC72A031A4600F255FF /* ViewSleep.swift */; };
 		7ACCFECA2A04BB8D00F255FF /* SleepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACCFEC92A04BB8D00F255FF /* SleepViewController.swift */; };
@@ -56,6 +58,8 @@
 		5582FAE32A00AD6800C2D9DF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5582FAE52A00B47700C2D9DF /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		5582FAE72A00DE5D00C2D9DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5724EB982A105D5C0036150A /* PermissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
+		5724EB9A2A105D630036150A /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		5757C5B62A020534005F2D93 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7ACCFEC72A031A4600F255FF /* ViewSleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSleep.swift; sourceTree = "<group>"; };
 		7ACCFEC92A04BB8D00F255FF /* SleepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepViewController.swift; sourceTree = "<group>"; };
@@ -216,7 +220,9 @@
 				DF50A2C92A031276001037D5 /* DashboardViewController.swift */,
 				DF50A2CB2A0316B9001037D5 /* CircularProgressView.swift */,
 				5757C5B62A020534005F2D93 /* ProfileViewController.swift */,
+				5724EB9A2A105D630036150A /* TabViewController.swift */,
 				7ACCFEC92A04BB8D00F255FF /* SleepViewController.swift */,
+				5724EB982A105D5C0036150A /* PermissionViewController.swift */,
 				552B88C62A0F4ABA006461E0 /* ExerciseFirstChildVC.swift */,
 				552B88C82A0F4E03006461E0 /* ExerciseHeartrateChildVC.swift */,
 			);
@@ -417,6 +423,8 @@
 				EB9525C02474C9C2001B5178 /* WelcomeViewController.swift in Sources */,
 				5582FAE62A00B47700C2D9DF /* ExerciseViewController.swift in Sources */,
 				EB12722B24859C1600548CD1 /* DataTypeTableViewCell.swift in Sources */,
+				5724EB9B2A105D630036150A /* TabViewController.swift in Sources */,
+				5724EB992A105D5C0036150A /* PermissionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,7 +575,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SmoothWalker/Supporting Files/SmoothWalker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z99RHNG9DQ;
+				DEVELOPMENT_TEAM = J84RJL837B;
 				INFOPLIST_FILE = "SmoothWalker/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
