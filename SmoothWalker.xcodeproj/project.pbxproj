@@ -18,6 +18,7 @@
 		5757C5B72A020534005F2D93 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5757C5B62A020534005F2D93 /* ProfileViewController.swift */; };
 		7ACCFEC82A031A4600F255FF /* ViewSleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACCFEC72A031A4600F255FF /* ViewSleep.swift */; };
 		7ACCFECA2A04BB8D00F255FF /* SleepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACCFEC92A04BB8D00F255FF /* SleepViewController.swift */; };
+		DF28F24F2A11A493000E1E37 /* DietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF28F24E2A11A493000E1E37 /* DietViewController.swift */; };
 		DF50A2CA2A031276001037D5 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50A2C92A031276001037D5 /* DashboardViewController.swift */; };
 		DF50A2CC2A0316B9001037D5 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50A2CB2A0316B9001037D5 /* CircularProgressView.swift */; };
 		EB12722B24859C1600548CD1 /* DataTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12722A24859C1600548CD1 /* DataTypeTableViewCell.swift */; };
@@ -67,6 +68,7 @@
 		7ACCFEC92A04BB8D00F255FF /* SleepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepViewController.swift; sourceTree = "<group>"; };
 		8037822B27C5C24067AC1EBF /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		DDC3EAD6D9404AADDCC92FF8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DF28F24E2A11A493000E1E37 /* DietViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietViewController.swift; sourceTree = "<group>"; };
 		DF50A2C92A031276001037D5 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		DF50A2CB2A0316B9001037D5 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		EB12722A24859C1600548CD1 /* DataTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypeTableViewCell.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				EB9525BB2474C930001B5178 /* WeeklyReportTableViewController.swift */,
 				5582FAE52A00B47700C2D9DF /* ExerciseViewController.swift */,
 				DF50A2C92A031276001037D5 /* DashboardViewController.swift */,
+				DF28F24E2A11A493000E1E37 /* DietViewController.swift */,
 				DF50A2CB2A0316B9001037D5 /* CircularProgressView.swift */,
 				5757C5B62A020534005F2D93 /* ProfileViewController.swift */,
 				5724EB9A2A105D630036150A /* TabViewController.swift */,
@@ -402,6 +405,7 @@
 				EB12722F2485C83E00548CD1 /* EmptyDataBackgroundView.swift in Sources */,
 				5757C5B72A020534005F2D93 /* ProfileViewController.swift in Sources */,
 				EB9525B52474C282001B5178 /* HealthDataTableViewController.swift in Sources */,
+				DF28F24F2A11A493000E1E37 /* DietViewController.swift in Sources */,
 				EB305B7C2485D99B007A7694 /* HealthQueryTableViewController.swift in Sources */,
 				552B88C92A0F4E03006461E0 /* ExerciseHeartrateChildVC.swift in Sources */,
 				EB305B7E2485E4B8007A7694 /* HealthKitSupport+Strings.swift in Sources */,

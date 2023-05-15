@@ -516,9 +516,10 @@
                     </tabBar>
                     <connections>
                         <segue destination="lWQ-Xb-PNi" kind="relationship" relationship="viewControllers" id="62P-dV-7H3"/>
+                        <segue destination="DrN-r8-tp7" kind="relationship" relationship="viewControllers" id="1aF-Ug-Mpo"/>
                         <segue destination="nlj-SA-BV4" kind="relationship" relationship="viewControllers" id="GwF-si-ltL"/>
                         <segue destination="WYI-ZA-AFR" kind="relationship" relationship="viewControllers" id="vC4-DN-gWM"/>
-                        <segue destination="DrN-r8-tp7" kind="relationship" relationship="viewControllers" id="1aF-Ug-Mpo"/>
+                        <segue destination="xFu-BN-33K" kind="relationship" relationship="viewControllers" id="aRj-7o-gbf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ETF-kG-2AG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -565,13 +566,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXB-la-7a0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-945" y="700"/>
+            <point key="canvasLocation" x="-19.083969465648853" y="700"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="Iue-VJ-NHC">
             <objects>
                 <navigationController id="lWQ-Xb-PNi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="7jw-Sk-b6Y">
+                    <tabBarItem key="tabBarItem" title="Profile" id="7jw-Sk-b6Y">
                         <imageReference key="image" image="person.crop.circle" catalog="system" symbolScale="large"/>
                         <imageReference key="selectedImage" image="person.crop.circle" catalog="system" symbolScale="large"/>
                     </tabBarItem>
@@ -587,11 +588,11 @@
             </objects>
             <point key="canvasLocation" x="-1796" y="-1337"/>
         </scene>
-        <!--Item-->
+        <!--Exercise-->
         <scene sceneID="FxJ-Vg-cw3">
             <objects>
                 <navigationController id="nlj-SA-BV4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="wwY-09-SyN">
+                    <tabBarItem key="tabBarItem" title="Exercise" id="wwY-09-SyN">
                         <imageReference key="image" image="figure.run" catalog="system" symbolScale="large"/>
                         <imageReference key="selectedImage" image="figure.run" catalog="system" symbolScale="large"/>
                     </tabBarItem>
@@ -607,11 +608,11 @@
             </objects>
             <point key="canvasLocation" x="-1797" y="-690"/>
         </scene>
-        <!--Item-->
+        <!--Sleep-->
         <scene sceneID="NlH-tN-wkw">
             <objects>
                 <navigationController id="WYI-ZA-AFR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="6x7-fB-7jw">
+                    <tabBarItem key="tabBarItem" title="Sleep" id="6x7-fB-7jw">
                         <imageReference key="image" image="bed.double" catalog="system" symbolScale="large"/>
                         <imageReference key="selectedImage" image="bed.double" catalog="system" symbolScale="large"/>
                     </tabBarItem>
@@ -627,11 +628,11 @@
             </objects>
             <point key="canvasLocation" x="-1797" y="-46"/>
         </scene>
-        <!--Item-->
+        <!--Dashboard-->
         <scene sceneID="auC-KG-8IN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DrN-r8-tp7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="7mZ-Mg-Q4z">
+                    <tabBarItem key="tabBarItem" title="Dashboard" id="7mZ-Mg-Q4z">
                         <imageReference key="image" image="checklist" catalog="system" symbolScale="large"/>
                         <imageReference key="selectedImage" image="checklist" catalog="system" symbolScale="large"/>
                     </tabBarItem>
@@ -647,7 +648,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Pt-JK-RRi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1797" y="700"/>
+            <point key="canvasLocation" x="-870.99236641221376" y="700"/>
         </scene>
         <!--Exercise First ChildVC-->
         <scene sceneID="uQF-nl-dhs">
@@ -679,6 +680,44 @@
             </objects>
             <point key="canvasLocation" x="-107" y="-492"/>
         </scene>
+        <!--Diet-->
+        <scene sceneID="LsA-D2-c5p">
+            <objects>
+                <viewController id="Hb9-Wr-DAi" customClass="DietViewController" customModule="SmoothWalker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tRe-zv-cWQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CXQ-7n-jg2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Diet" id="VtU-Zv-NNb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ohe-R3-jKL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2721.3740458015268" y="624.64788732394368"/>
+        </scene>
+        <!--Diet-->
+        <scene sceneID="Rje-x8-Shc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xFu-BN-33K" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Diet" id="LX2-bG-tP6">
+                        <imageReference key="image" image="fork.knife" catalog="system" symbolScale="large"/>
+                        <imageReference key="selectedImage" image="fork.knife" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lnu-ap-QO7">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Hb9-Wr-DAi" kind="relationship" relationship="rootViewController" id="avw-hQ-c2s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QvR-Kb-wjP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3648.0916030534349" y="624.64788732394368"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bed.double" catalog="system" width="128" height="82"/>
@@ -688,6 +727,7 @@
         <image name="example sleep bar graph" width="663" height="735"/>
         <image name="example smileys" width="526" height="127"/>
         <image name="figure.run" catalog="system" width="115" height="128"/>
+        <image name="fork.knife" catalog="system" width="94" height="128"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
