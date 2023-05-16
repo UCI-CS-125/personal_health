@@ -25,8 +25,13 @@ class ExerciseViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segues.toExerciseFirstChild {
-            let destVC = segue.destination as! ExerciseFirstChildVC
-            destVC.view.backgroundColor = .blue
+            let destVC = segue.destination as! MobilityChartDataViewController
+//            let destVC = segue.destination as! MobilityChartDataViewController
+            let viewController = MobilityChartDataViewController()
+//            let viewController = ExerciseFirstChildVC()
+            destVC.present(viewController, animated: false)
+//            destVC.view.addSubview(viewController.view)
+//            destVC.view.backgroundColor = .blue
         }
     }
     

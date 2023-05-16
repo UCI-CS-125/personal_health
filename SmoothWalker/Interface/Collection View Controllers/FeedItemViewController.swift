@@ -32,10 +32,12 @@ class DataTypeCollectionViewController: UIViewController {
     
     init() {
         super.init(nibName: nil, bundle: nil)
+//        super.init(coder: NSCoder)
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+//        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - View Lifecycle
