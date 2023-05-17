@@ -49,8 +49,8 @@ class DataTypeCollectionViewController: UIViewController {
         setUpViews()
         
         title = tabBarItem.title
-        view.backgroundColor = .systemBackground
-        collectionView.backgroundColor = .systemBackground
+//        view.backgroundColor = .systemBackground
+//        collectionView.backgroundColor = .systemBackground
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {

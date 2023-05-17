@@ -118,7 +118,7 @@
                             </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wK1-Qd-b7c"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <color key="backgroundColor" red="0.6411464214" green="0.78259307150000001" blue="0.87452346089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="ocK-ru-LGP" firstAttribute="top" secondItem="zcT-XJ-3dG" secondAttribute="top" id="1AB-N6-Arg"/>
                             <constraint firstItem="ocK-ru-LGP" firstAttribute="top" secondItem="gCw-XZ-ILV" secondAttribute="top" id="1Li-fQ-ZWz"/>
@@ -746,9 +746,6 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

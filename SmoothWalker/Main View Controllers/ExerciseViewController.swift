@@ -19,7 +19,6 @@ class ExerciseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = tabBarItem.title
-        view.backgroundColor = .systemBackground
         // Do any additional setup after loading the view.
     }
     
