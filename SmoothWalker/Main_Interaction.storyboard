@@ -222,10 +222,10 @@
             </objects>
             <point key="canvasLocation" x="-946" y="-46"/>
         </scene>
-        <!--Profile & BMI-->
+        <!--Profile-->
         <scene sceneID="bOz-de-hdS">
             <objects>
-                <tableViewController title="Profile &amp; BMI" id="8kN-Eb-jSG" customClass="ProfileViewController" customModule="None" sceneMemberID="viewController">
+                <tableViewController title="Profile" id="8kN-Eb-jSG" customClass="ProfileViewController" customModule="SmoothWalker" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Uqg-ZL-eZZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,7 +248,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text=" Unknown" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Gc-WH-3DT">
-                                                    <rect key="frame" x="321" y="13" width="72.5" height="19.5"/>
+                                                    <rect key="frame" x="300" y="13" width="73" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -272,7 +272,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text=" Unknown" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WtM-GY-JnX">
-                                                    <rect key="frame" x="321" y="13" width="72.5" height="19.5"/>
+                                                    <rect key="frame" x="300" y="13" width="72.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -498,8 +498,20 @@
                                 </cells>
                             </tableViewSection>
                         </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="8kN-Eb-jSG" id="BWI-vj-SmC"/>
+                            <outlet property="delegate" destination="8kN-Eb-jSG" id="usA-aT-k0b"/>
+                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="rCF-iC-Xzr"/>
+                    <connections>
+                        <outlet property="ageLabel" destination="b8k-kP-HuT" id="Gux-3c-Oe5"/>
+                        <outlet property="biologicalSexLabel" destination="IcN-1Y-o10" id="WPz-v0-3OD"/>
+                        <outlet property="bloodTypeLabel" destination="A0b-x7-azF" id="YsT-R4-QSW"/>
+                        <outlet property="bodyMassIndexLabel" destination="TOE-d6-nh4" id="0ZE-bh-HFx"/>
+                        <outlet property="heightLabel" destination="Wgq-NX-ZgT" id="bYB-Gr-LuR"/>
+                        <outlet property="weightLabel" destination="4pe-cu-oum" id="57J-A9-pVo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z1Z-iG-8yN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

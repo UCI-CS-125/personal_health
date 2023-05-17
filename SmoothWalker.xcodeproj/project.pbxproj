@@ -16,6 +16,8 @@
 		5724EB9B2A105D630036150A /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724EB9A2A105D630036150A /* TabViewController.swift */; };
 		5724EB9D2A105DB60036150A /* Main_Interaction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5724EB9C2A105DB60036150A /* Main_Interaction.storyboard */; };
 		5757C5B72A020534005F2D93 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5757C5B62A020534005F2D93 /* ProfileViewController.swift */; };
+		57C5D2862A1168150095ECA2 /* UserHealthProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5D2852A1168150095ECA2 /* UserHealthProfile.swift */; };
+		57C5D2882A1191B40095ECA2 /* ProfileDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5D2872A1191B40095ECA2 /* ProfileDataStore.swift */; };
 		7ACCFEC82A031A4600F255FF /* ViewSleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACCFEC72A031A4600F255FF /* ViewSleep.swift */; };
 		7ACCFECA2A04BB8D00F255FF /* SleepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACCFEC92A04BB8D00F255FF /* SleepViewController.swift */; };
 		DF28F24F2A11A493000E1E37 /* DietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF28F24E2A11A493000E1E37 /* DietViewController.swift */; };
@@ -64,6 +66,8 @@
 		5724EB9A2A105D630036150A /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		5724EB9C2A105DB60036150A /* Main_Interaction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main_Interaction.storyboard; sourceTree = "<group>"; };
 		5757C5B62A020534005F2D93 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		57C5D2852A1168150095ECA2 /* UserHealthProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHealthProfile.swift; sourceTree = "<group>"; };
+		57C5D2872A1191B40095ECA2 /* ProfileDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataStore.swift; sourceTree = "<group>"; };
 		7ACCFEC72A031A4600F255FF /* ViewSleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSleep.swift; sourceTree = "<group>"; };
 		7ACCFEC92A04BB8D00F255FF /* SleepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepViewController.swift; sourceTree = "<group>"; };
 		8037822B27C5C24067AC1EBF /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 				EB12722C2485BA9400548CD1 /* HealthDataTypeValue.swift */,
 				EB644FA22473136500CF27F0 /* ServerResponse.swift */,
 				7ACCFEC72A031A4600F255FF /* ViewSleep.swift */,
+				57C5D2852A1168150095ECA2 /* UserHealthProfile.swift */,
+				57C5D2872A1191B40095ECA2 /* ProfileDataStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -418,6 +424,7 @@
 				DF50A2CA2A031276001037D5 /* DashboardViewController.swift in Sources */,
 				F9907AF32458947C00987667 /* AppDelegate.swift in Sources */,
 				552B88C72A0F4ABA006461E0 /* ExerciseFirstChildVC.swift in Sources */,
+				57C5D2862A1168150095ECA2 /* UserHealthProfile.swift in Sources */,
 				F9907AF52458947C00987667 /* SceneDelegate.swift in Sources */,
 				EB9525B72474C396001B5178 /* WeeklyDataTableViewController.swift in Sources */,
 				EB48C1C1246B2EB800AE8FE3 /* UIApplication+Extension.swift in Sources */,
@@ -429,6 +436,7 @@
 				DF50A2CC2A0316B9001037D5 /* CircularProgressView.swift in Sources */,
 				EB644F9F24730E2B00CF27F0 /* MobilityChartDataViewController.swift in Sources */,
 				EB9525C02474C9C2001B5178 /* WelcomeViewController.swift in Sources */,
+				57C5D2882A1191B40095ECA2 /* ProfileDataStore.swift in Sources */,
 				5582FAE62A00B47700C2D9DF /* ExerciseViewController.swift in Sources */,
 				EB12722B24859C1600548CD1 /* DataTypeTableViewCell.swift in Sources */,
 				5724EB9B2A105D630036150A /* TabViewController.swift in Sources */,

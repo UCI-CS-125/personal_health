@@ -103,7 +103,7 @@ class PermissionViewController: UIViewController {
             print(status)
             
             // Results come back on a background thread. Dispatch UI updates to the main thread.
-            DispatchQueue.main.async {
+            Dispatch.DispatchQueue.main.async {
                 self.descriptionLabel.text = status
             }
         }
@@ -116,10 +116,12 @@ class PermissionViewController: UIViewController {
     
     private func enableNextButton(){
         if(self.healthAccess){
-            nextButton.isEnabled = true
-            self.navigationItem.rightBarButtonItem?.isEnabled = true
+            Dispatch.DispatchQueue.main.async {
+                self.nextButton.isEnabled = true
+                self.navigationItem.rightBarButtonItem?.isEnabled = true
 
-            print("Next Button Enabled",nextButton.isEnabled)
+                print("Next Button Enabled",self.nextButton.isEnabled)            }
+
         }
 
         

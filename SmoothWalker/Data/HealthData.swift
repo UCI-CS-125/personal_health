@@ -14,8 +14,8 @@ class HealthData {
     
     // MARK: - Data Types
     
-    static var readDataTypes: [HKSampleType] {
-        return allHealthDataTypes
+    static var readDataTypes: [HKObjectType] {
+        return allHealthDataTypes+biographicalInfo
     }
     
     static var shareDataTypes: [HKSampleType] {
@@ -25,28 +25,39 @@ class HealthData {
     private static var allHealthDataTypes: [HKSampleType] {
         let typeIdentifiers: [String] = [
             HKQuantityTypeIdentifier.distanceWalkingRunning.rawValue,
-            
-            
             HKQuantityTypeIdentifier.stepCount.rawValue,
             HKQuantityTypeIdentifier.sixMinuteWalkTestDistance.rawValue,
-            
+            HKQuantityTypeIdentifier.bodyMassIndex.rawValue,
         ]
-        
+
         return typeIdentifiers.compactMap { getSampleType(for: $0) }
     }
-    
+    private static var biographicalInfo: [HKObjectType]{
+        guard   let dateOfBirth = HKObjectType.characteristicType(forIdentifier: .dateOfBirth),
+                let bloodType = HKObjectType.characteristicType(forIdentifier: .bloodType),
+                let biologicalSex = HKObjectType.characteristicType(forIdentifier: .biologicalSex),
+//                let bodyMassIndex = HKObjectType.quantityType(forIdentifier: .bodyMassIndex),
+                let height = HKObjectType.quantityType(forIdentifier: .height),
+                let bodyMass = HKObjectType.quantityType(forIdentifier: .bodyMass),
+                let activeEnergy = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned) else{
+            print("there was an error")
+            return []
+        }
+        return [dateOfBirth,bloodType,biologicalSex, height,bodyMass,activeEnergy]
+        
+    }
     // MARK: - Authorization
     
     /// Request health data from HealthKit if needed, using the data types within `HealthData.allHealthDataTypes`
     class func requestHealthDataAccessIfNeeded(dataTypes: [String]? = nil, completion: @escaping (_ success: Bool) -> Void) {
-        var readDataTypes = Set(allHealthDataTypes)
-        var shareDataTypes = Set(allHealthDataTypes)
+        var readDataTypes = Set(allHealthDataTypes+biographicalInfo)
+        let shareDataTypes = Set( allHealthDataTypes)
         
         if let dataTypeIdentifiers = dataTypes {
             readDataTypes = Set(dataTypeIdentifiers.compactMap { getSampleType(for: $0) })
-            shareDataTypes = readDataTypes
+//            shareDataTypes = readDataTypes
         }
-        
+        print(readDataTypes)
         requestHealthDataAccessIfNeeded(toShare: shareDataTypes, read: readDataTypes, completion: completion)
     }
     
