@@ -8,13 +8,30 @@
 
 import UIKit
 
-class DietViewController: UIViewController {
+class DietViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var breakfast: UITextField!
+    
+    @IBOutlet weak var lunch: UITextField!
+    
+    @IBOutlet weak var dinner: UITextField!
+    
+    
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        breakfast.delegate = self
+        lunch.delegate = self
+        dinner.delegate = self
+        
     }
     
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+      }
 
 }
 
