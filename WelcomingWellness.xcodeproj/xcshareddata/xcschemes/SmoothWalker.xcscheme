@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F9907AEE2458947C00987667"
-               BuildableName = "SmoothWalker.app"
-               BlueprintName = "SmoothWalker"
-               ReferencedContainer = "container:SmoothWalker.xcodeproj">
+               BuildableName = "WelcomingWellness.app"
+               BlueprintName = "WelcomingWellness"
+               ReferencedContainer = "container:WelcomingWellness.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F9907AEE2458947C00987667"
-            BuildableName = "SmoothWalker.app"
-            BlueprintName = "SmoothWalker"
-            ReferencedContainer = "container:SmoothWalker.xcodeproj">
+            BuildableName = "WelcomingWellness.app"
+            BlueprintName = "WelcomingWellness"
+            ReferencedContainer = "container:WelcomingWellness.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F9907AEE2458947C00987667"
-            BuildableName = "SmoothWalker.app"
-            BlueprintName = "SmoothWalker"
-            ReferencedContainer = "container:SmoothWalker.xcodeproj">
+            BuildableName = "WelcomingWellness.app"
+            BlueprintName = "WelcomingWellness"
+            ReferencedContainer = "container:WelcomingWellness.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
