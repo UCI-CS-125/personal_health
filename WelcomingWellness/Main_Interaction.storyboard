@@ -13,7 +13,7 @@
         <!--Exercise View Controller-->
         <scene sceneID="TBF-di-k71">
             <objects>
-                <viewController id="eAC-O0-UfG" customClass="ExerciseViewController" customModule="SmoothWalker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eAC-O0-UfG" customClass="ExerciseViewController" customModule="WelcomingWellness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nks-Df-1rs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -167,7 +167,7 @@
         <!--Sleep View Controller-->
         <scene sceneID="Bmn-S6-Hwe">
             <objects>
-                <viewController id="CMK-0J-omp" userLabel="Sleep View Controller" customClass="SleepViewController" customModule="SmoothWalker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CMK-0J-omp" userLabel="Sleep View Controller" customClass="SleepViewController" customModule="WelcomingWellness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3sL-It-QdM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -225,7 +225,7 @@
         <!--Profile-->
         <scene sceneID="bOz-de-hdS">
             <objects>
-                <tableViewController title="Profile" id="8kN-Eb-jSG" customClass="ProfileViewController" customModule="SmoothWalker" sceneMemberID="viewController">
+                <tableViewController title="Profile" id="8kN-Eb-jSG" customClass="ProfileViewController" customModule="WelcomingWellness" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Uqg-ZL-eZZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -505,12 +505,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="rCF-iC-Xzr"/>
                     <connections>
-                        <outlet property="ageLabel" destination="b8k-kP-HuT" id="Gux-3c-Oe5"/>
-                        <outlet property="biologicalSexLabel" destination="IcN-1Y-o10" id="WPz-v0-3OD"/>
-                        <outlet property="bloodTypeLabel" destination="A0b-x7-azF" id="YsT-R4-QSW"/>
-                        <outlet property="bodyMassIndexLabel" destination="TOE-d6-nh4" id="0ZE-bh-HFx"/>
-                        <outlet property="heightLabel" destination="Wgq-NX-ZgT" id="bYB-Gr-LuR"/>
-                        <outlet property="weightLabel" destination="4pe-cu-oum" id="57J-A9-pVo"/>
+                        <outlet property="ageLabel" destination="b8k-kP-HuT" id="Tew-qw-NlN"/>
+                        <outlet property="biologicalSexLabel" destination="IcN-1Y-o10" id="9vJ-hg-JiY"/>
+                        <outlet property="bloodTypeLabel" destination="A0b-x7-azF" id="dVT-6w-v5V"/>
+                        <outlet property="bodyMassIndexLabel" destination="TOE-d6-nh4" id="77G-xY-Fpg"/>
+                        <outlet property="heightLabel" destination="Wgq-NX-ZgT" id="hmb-kC-48s"/>
+                        <outlet property="weightLabel" destination="4pe-cu-oum" id="rcM-oc-eTn"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z1Z-iG-8yN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -520,7 +520,7 @@
         <!--Tab View Controller-->
         <scene sceneID="Z11-X1-LDX">
             <objects>
-                <tabBarController id="10P-aO-1TZ" customClass="TabViewController" customModule="SmoothWalker" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="10P-aO-1TZ" customClass="TabViewController" customModule="WelcomingWellness" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bfs-x3-uUJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -541,7 +541,7 @@
         <!-- My Lifestyle Score-->
         <scene sceneID="wvd-ML-3Ke">
             <objects>
-                <viewController id="6Gs-qQ-A64" customClass="DashboardViewController" customModule="SmoothWalker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6Gs-qQ-A64" customClass="DashboardViewController" customModule="WelcomingWellness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ko-gd-gqF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -665,7 +665,7 @@
         <!--Mobility Chart Data View Controller-->
         <scene sceneID="uQF-nl-dhs">
             <objects>
-                <viewController id="vN4-Ab-9Ka" customClass="MobilityChartDataViewController" customModule="SmoothWalker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vN4-Ab-9Ka" customClass="MobilityChartDataViewController" customModule="WelcomingWellness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7rb-DF-wRo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -680,7 +680,7 @@
         <!--Exercise Heartrate ChildVC-->
         <scene sceneID="tss-RA-0jF">
             <objects>
-                <viewController id="dBp-sz-Jr2" customClass="ExerciseHeartrateChildVC" customModule="SmoothWalker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dBp-sz-Jr2" customClass="ExerciseHeartrateChildVC" customModule="WelcomingWellness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZlY-Ki-sYT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -695,7 +695,7 @@
         <!--Today's Meals-->
         <scene sceneID="LsA-D2-c5p">
             <objects>
-                <viewController id="Hb9-Wr-DAi" customClass="DietViewController" customModule="SmoothWalker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Hb9-Wr-DAi" customClass="DietViewController" customModule="WelcomingWellness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tRe-zv-cWQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
