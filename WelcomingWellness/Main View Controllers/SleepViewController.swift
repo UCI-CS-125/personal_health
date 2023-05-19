@@ -55,7 +55,6 @@ class SleepViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = tabBarItem.title
-        view.backgroundColor = .purple
     }
 
 }
