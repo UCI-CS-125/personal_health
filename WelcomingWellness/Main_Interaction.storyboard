@@ -179,10 +179,6 @@
                                 <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="example sleep bar graph" translatesAutoresizingMaskIntoConstraints="NO" id="zB3-k6-XgP" customClass="SleepViewController.swift">
-                                <rect key="frame" x="38" y="199" width="338" height="431"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="example smileys" translatesAutoresizingMaskIntoConstraints="NO" id="0QN-d7-xcm">
                                 <rect key="frame" x="13" y="111" width="388" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -212,6 +208,13 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="LOG"/>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N5H-Tp-lbo">
+                                <rect key="frame" x="97" y="384" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="8Ar-xd-gtK" kind="embed" id="ZAB-o6-eKX"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yDq-4b-NgX"/>
                         <color key="backgroundColor" red="0.6411464214" green="0.78259307150000001" blue="0.87452346089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -220,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2P5-JC-d4D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-946" y="-46"/>
+            <point key="canvasLocation" x="-946.37681159420299" y="-46.205357142857139"/>
         </scene>
         <!--Profile-->
         <scene sceneID="bOz-de-hdS">
@@ -728,13 +731,40 @@
             </objects>
             <point key="canvasLocation" x="-3648.0916030534349" y="624.64788732394368"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="wXd-BT-eWS">
+            <objects>
+                <viewController id="CQu-il-mBH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xUm-hv-bRr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tWF-il-VjN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2338" y="-62"/>
+        </scene>
+        <!--Sleep View Controller-->
+        <scene sceneID="1ju-fo-PJa">
+            <objects>
+                <viewController id="8Ar-xd-gtK" customClass="SleepViewController" customModule="WelcomingWellness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iRT-4I-Cdg">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OZE-xL-avG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178" y="-139"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bed.double" catalog="system" width="128" height="82"/>
         <image name="checklist" catalog="system" width="128" height="107"/>
         <image name="checkmark" width="800" height="800"/>
         <image name="empty circle" width="1000" height="1080"/>
-        <image name="example sleep bar graph" width="663" height="735"/>
         <image name="example smileys" width="526" height="127"/>
         <image name="figure.run" catalog="system" width="115" height="128"/>
         <image name="fork.knife" catalog="system" width="94" height="128"/>
