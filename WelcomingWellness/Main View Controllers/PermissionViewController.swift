@@ -12,6 +12,10 @@ import HealthKit
 
 class PermissionViewController: UIViewController {
     
+    @IBOutlet weak var firstName: UITextField!
+    
+    @IBOutlet weak var lastName: UITextField!
+    
     
     @IBOutlet weak var AuthorizeButton: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -50,7 +54,7 @@ class PermissionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nextButton.isEnabled = false
+        nextButton.isEnabled = true
         getHealthAuthorizationRequestStatus()
         
     }
@@ -115,12 +119,16 @@ class PermissionViewController: UIViewController {
     }
     
     private func enableNextButton(){
-        if(self.healthAccess){
+
             Dispatch.DispatchQueue.main.async {
+                if(self.healthAccess && self.firstName.hasText && self.lastName.hasText){
+                    ProfileDataStore().lastName = self.lastName.text!
+                    ProfileDataStore().firstName = self.firstName.text!
                 self.nextButton.isEnabled = true
                 self.navigationItem.rightBarButtonItem?.isEnabled = true
 
                 print("Next Button Enabled",self.nextButton.isEnabled)            }
+            
 
         }
 

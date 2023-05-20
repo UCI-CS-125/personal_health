@@ -15,6 +15,8 @@
 		5724EB992A105D5C0036150A /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724EB982A105D5C0036150A /* PermissionViewController.swift */; };
 		5724EB9B2A105D630036150A /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724EB9A2A105D630036150A /* TabViewController.swift */; };
 		5724EB9D2A105DB60036150A /* Main_Interaction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5724EB9C2A105DB60036150A /* Main_Interaction.storyboard */; };
+		5750684A2A1868D0006B9D78 /* ExerciseGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575068492A1868D0006B9D78 /* ExerciseGoals.swift */; };
+		5750684C2A186A4C006B9D78 /* ChildGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5750684B2A186A4C006B9D78 /* ChildGoal.swift */; };
 		5757C5B72A020534005F2D93 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5757C5B62A020534005F2D93 /* ProfileViewController.swift */; };
 		57C5D2862A1168150095ECA2 /* UserHealthProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5D2852A1168150095ECA2 /* UserHealthProfile.swift */; };
 		57C5D2882A1191B40095ECA2 /* ProfileDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5D2872A1191B40095ECA2 /* ProfileDataStore.swift */; };
@@ -65,6 +67,8 @@
 		5724EB982A105D5C0036150A /* PermissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
 		5724EB9A2A105D630036150A /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		5724EB9C2A105DB60036150A /* Main_Interaction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main_Interaction.storyboard; sourceTree = "<group>"; };
+		575068492A1868D0006B9D78 /* ExerciseGoals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseGoals.swift; sourceTree = "<group>"; };
+		5750684B2A186A4C006B9D78 /* ChildGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildGoal.swift; sourceTree = "<group>"; };
 		5757C5B62A020534005F2D93 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		57C5D2852A1168150095ECA2 /* UserHealthProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHealthProfile.swift; sourceTree = "<group>"; };
 		57C5D2872A1191B40095ECA2 /* ProfileDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataStore.swift; sourceTree = "<group>"; };
@@ -236,6 +240,8 @@
 				5724EB982A105D5C0036150A /* PermissionViewController.swift */,
 				552B88C62A0F4ABA006461E0 /* ExerciseFirstChildVC.swift */,
 				552B88C82A0F4E03006461E0 /* ExerciseHeartrateChildVC.swift */,
+				575068492A1868D0006B9D78 /* ExerciseGoals.swift */,
+				5750684B2A186A4C006B9D78 /* ChildGoal.swift */,
 			);
 			name = "View Controllers";
 			path = "Main View Controllers";
@@ -406,6 +412,7 @@
 				EB12722D2485BA9400548CD1 /* HealthDataTypeValue.swift in Sources */,
 				F9907AF72458947C00987667 /* FeedItemViewController.swift in Sources */,
 				EB9525BE2474C9A2001B5178 /* SplashScreenViewController.swift in Sources */,
+				5750684A2A1868D0006B9D78 /* ExerciseGoals.swift in Sources */,
 				EB9525BA2474C8F2001B5178 /* ChartTableViewController.swift in Sources */,
 				EB644FA1247311DF00CF27F0 /* Network.swift in Sources */,
 				EB12722F2485C83E00548CD1 /* EmptyDataBackgroundView.swift in Sources */,
@@ -435,6 +442,7 @@
 				EB48C1C4246B351C00AE8FE3 /* CareKitSupport.swift in Sources */,
 				DF50A2CC2A0316B9001037D5 /* CircularProgressView.swift in Sources */,
 				EB644F9F24730E2B00CF27F0 /* MobilityChartDataViewController.swift in Sources */,
+				5750684C2A186A4C006B9D78 /* ChildGoal.swift in Sources */,
 				EB9525C02474C9C2001B5178 /* WelcomeViewController.swift in Sources */,
 				57C5D2882A1191B40095ECA2 /* ProfileDataStore.swift in Sources */,
 				5582FAE62A00B47700C2D9DF /* ExerciseViewController.swift in Sources */,
@@ -518,7 +526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -574,7 +582,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -594,7 +602,7 @@
 				DEVELOPMENT_TEAM = Z99RHNG9DQ;
 				INFOPLIST_FILE = "WelcomingWellness/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -618,7 +626,7 @@
 				DEVELOPMENT_TEAM = J84RJL837B;
 				INFOPLIST_FILE = "WelcomingWellness/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

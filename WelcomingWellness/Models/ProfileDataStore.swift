@@ -10,6 +10,9 @@ import HealthKit
 
 class ProfileDataStore {
 
+    var firstName:String = ""
+    var lastName:String = ""
+    
   class func getAgeSexAndBloodType() throws -> (age: Int,
                                                 biologicalSex: HKBiologicalSex,
                                                 bloodType: HKBloodType) {

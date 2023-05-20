@@ -30,6 +30,9 @@ class ProfileViewController: UITableViewController {
     }
   }
   
+    @IBOutlet weak var firstNameLabel: UILabel!
+    @IBOutlet weak var lastNameLabel: UILabel!
+    
   @IBOutlet private var ageLabel:UILabel!
   @IBOutlet private var bloodTypeLabel:UILabel!
   @IBOutlet private var biologicalSexLabel:UILabel!
@@ -50,10 +53,15 @@ class ProfileViewController: UITableViewController {
         super.viewDidLoad()
         print("View Loaded")
         updateHealthInfo()
-        
+        loadName()
     }
   
+    private func loadName(){
+//        firstNameLabel.text = ProfileDataStore().firstName
+//        lastNameLabel.text = ProfileDataStore().lastName
 
+    }
+    
     
   private func loadAndDisplayAgeSexAndBloodType() {
     
