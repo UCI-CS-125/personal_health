@@ -13,26 +13,21 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var animatedCountingLabel: UILabel!
     
     
-    var circularProgressBarView: CircularProgressView!
-    var circularViewDuration: TimeInterval = 2
-    var circularViewProgress: Double = 0.5
+    var LifestyleView: LifestyleScoreView!
+    var LifestyleViewDuration: TimeInterval = 2
+    var setScore: Double = 0.50
     
     override func viewDidLoad() {
         super.viewDidLoad()
         animatedCountingLabel.text = "50"
-        setUpCircularProgressBarView()
+        setUpLifestyleScoreView()
     }
     
-    func setUpCircularProgressBarView() {
-        // set view
-        circularProgressBarView = CircularProgressView(frame: .zero)
-        // align to the center of the screen
-        //circularProgressBarView.center = view.center
-        circularProgressBarView.frame = CGRect(x: 200, y: 250, width: view.frame.size.width, height: view.frame.size.height )
-        // call the animation with circularViewDuration
-        circularProgressBarView.progressAnimation(duration: circularViewDuration, toValue: circularViewProgress)
-        // add this view to the view controller
-        view.addSubview(circularProgressBarView)
+    func setUpLifestyleScoreView() {
+        LifestyleView = LifestyleScoreView(frame: .zero)
+        LifestyleView.frame = CGRect(x: 200, y: 250, width: view.frame.size.width, height: view.frame.size.height )
+        LifestyleView.Animation(duration: LifestyleViewDuration, toValue: setScore)
+        view.addSubview(LifestyleView)
     }
 
 }
