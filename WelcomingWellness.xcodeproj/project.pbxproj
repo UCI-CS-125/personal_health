@@ -599,7 +599,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "WelcomingWellness/Supporting Files/WelcomingWellness.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z99RHNG9DQ;
+				DEVELOPMENT_TEAM = J84RJL837B;
 				INFOPLIST_FILE = "WelcomingWellness/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -608,7 +608,7 @@
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.WelcomingWellness;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cs125.WelcomingWellness;
 				PRODUCT_NAME = WelcomingWellness;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -632,7 +632,7 @@
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.WelcomingWellness;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cs125.WelcomingWellness;
 				PRODUCT_NAME = WelcomingWellness;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
