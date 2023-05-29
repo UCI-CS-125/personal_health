@@ -12,60 +12,46 @@ import HealthKit
 
 class PermissionViewController: UIViewController {
     
-    @IBOutlet weak var firstName: UITextField!
-    
-    @IBOutlet weak var lastName: UITextField!
     
     
     @IBOutlet weak var AuthorizeButton: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
 
 
-    @IBOutlet weak var nextButton: UIBarButtonItem!
     @IBAction func pressedAuthButton(_ sender: Any) {
-        didSelectActionButton()
+        requestHealthAuthorization()
 
     }
     let healthStore = HealthData.healthStore
     
-    var healthAccess:Bool = false
+    var healthAccess:Bool = false{
+        didSet {
+            Dispatch.DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "HasHealthAccess", sender: nil)
+            }
+//            }
+            
+        }
+    }
+    
     /// The HealthKit data types we will request to read.
     let readTypes = Set(HealthData.readDataTypes)
     /// The HealthKit data types we will request to share and have write access.
     let shareTypes = Set(HealthData.shareDataTypes)
     
     var hasRequestedHealthData: Bool = false
-//    
-//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-//        print("segue should be preformed")
-//        if identifier == "AfterAuth" {
-//            if nextButton.isEnabled {
-//                return true
-//            }
-//            return false
-//        }else{
-//            return true
-//
-//        }
-//    }
-    
+
     
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nextButton.isEnabled = true
         getHealthAuthorizationRequestStatus()
-        
+ 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationItem.rightBarButtonItem?.isEnabled = false
-//        print("in the view will appear",self.navigationItem.rightBarButtonItem?.isEnabled)
-        enableNextButton()
-//        print("in the view will appear dos",self.navigationItem.rightBarButtonItem?.isEnabled)
-
 
     }
     
@@ -96,8 +82,8 @@ class PermissionViewController: UIViewController {
                     
                     self.healthAccess = true
                     
-                    self.enableNextButton()
                     status = "The application has already requested authorization for the specified data types. "
+                    print("hello: ",self.healthAccess)
                     status += self.createAuthorizationStatusDescription(for: self.shareTypes)
                 default:
                     break
@@ -114,27 +100,25 @@ class PermissionViewController: UIViewController {
     }
     
     
-    func didSelectActionButton() {
-        requestHealthAuthorization()
-    }
+
     
-    private func enableNextButton(){
-
-            Dispatch.DispatchQueue.main.async {
-                if(self.healthAccess && self.firstName.hasText && self.lastName.hasText){
-                    ProfileDataStore().lastName = self.lastName.text!
-                    ProfileDataStore().firstName = self.firstName.text!
-                self.nextButton.isEnabled = true
-                self.navigationItem.rightBarButtonItem?.isEnabled = true
-
-                print("Next Button Enabled",self.nextButton.isEnabled)            }
-            
-
-        }
-
-        
-    }
-    
+//    private func enableNextButton(){
+//
+//            Dispatch.DispatchQueue.main.async {
+//                if(self.healthAccess && self.firstName.hasText && self.lastName.hasText){
+//                    ProfileDataStore().lastName = self.lastName.text!
+//                    ProfileDataStore().firstName = self.firstName.text!
+//                self.nextButton.isEnabled = true
+//                self.navigationItem.rightBarButtonItem?.isEnabled = true
+//
+//                print("Next Button Enabled",self.nextButton.isEnabled)            }
+//
+//
+//        }
+//
+//
+//    }
+//
     func requestHealthAuthorization() {
         print("Requesting HealthKit authorization...")
         
@@ -152,7 +136,6 @@ class PermissionViewController: UIViewController {
             } else {
                 if success {
                     self.healthAccess = true
-                    self.enableNextButton()
                     if self.hasRequestedHealthData {
                         status = "You've already requested access to health data. "
                     } else {

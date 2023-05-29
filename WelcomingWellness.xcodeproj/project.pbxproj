@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14F0DAE3F792A486DFC3E158 /* Pods_WelcomingWellness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40747A902D0E5F0047818065 /* Pods_WelcomingWellness.framework */; };
 		552B88C72A0F4ABA006461E0 /* ExerciseFirstChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B88C62A0F4ABA006461E0 /* ExerciseFirstChildVC.swift */; };
 		552B88C92A0F4E03006461E0 /* ExerciseHeartrateChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B88C82A0F4E03006461E0 /* ExerciseHeartrateChildVC.swift */; };
 		5582FAE42A00AD6800C2D9DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5582FAE32A00AD6800C2D9DF /* Main.storyboard */; };
@@ -18,8 +19,14 @@
 		5750684A2A1868D0006B9D78 /* ExerciseGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575068492A1868D0006B9D78 /* ExerciseGoals.swift */; };
 		5750684C2A186A4C006B9D78 /* ChildGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5750684B2A186A4C006B9D78 /* ChildGoal.swift */; };
 		5757C5B72A020534005F2D93 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5757C5B62A020534005F2D93 /* ProfileViewController.swift */; };
+		57C525182A24418300EE4C70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57C525172A24418300EE4C70 /* GoogleService-Info.plist */; };
 		57C5D2862A1168150095ECA2 /* UserHealthProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5D2852A1168150095ECA2 /* UserHealthProfile.swift */; };
 		57C5D2882A1191B40095ECA2 /* ProfileDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5D2872A1191B40095ECA2 /* ProfileDataStore.swift */; };
+		57F7BA0A2A244EFF0000F6F8 /* CareKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 57F7BA092A244EFF0000F6F8 /* CareKitUI */; };
+		57F7BA0C2A24519C0000F6F8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F7BA0B2A24519C0000F6F8 /* LoginViewController.swift */; };
+		57F7BA0F2A245CD40000F6F8 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 57F7BA0E2A245CD40000F6F8 /* GoogleSignIn */; };
+		57F7BA112A245CD40000F6F8 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 57F7BA102A245CD40000F6F8 /* GoogleSignInSwift */; };
+		57F7BA142A246DC10000F6F8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57F7BA132A246DC10000F6F8 /* Login.storyboard */; };
 		7ACCFEC82A031A4600F255FF /* ViewSleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACCFEC72A031A4600F255FF /* ViewSleep.swift */; };
 		7ACCFECA2A04BB8D00F255FF /* SleepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACCFEC92A04BB8D00F255FF /* SleepViewController.swift */; };
 		DF28F24F2A11A493000E1E37 /* DietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF28F24E2A11A493000E1E37 /* DietViewController.swift */; };
@@ -30,7 +37,6 @@
 		EB12722F2485C83E00548CD1 /* EmptyDataBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12722E2485C83E00548CD1 /* EmptyDataBackgroundView.swift */; };
 		EB1272332485D5D200548CD1 /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1272322485D5D200548CD1 /* DataTableViewController.swift */; };
 		EB1B0CAA2486D7A700724782 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = EB1B0CAC2486D7A700724782 /* Localizable.stringsdict */; };
-		EB2ACB972492B2D600DEFA22 /* CareKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = EB2ACB962492B2D600DEFA22 /* CareKitUI */; };
 		EB305B7C2485D99B007A7694 /* HealthQueryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB305B7B2485D99B007A7694 /* HealthQueryTableViewController.swift */; };
 		EB305B7E2485E4B8007A7694 /* HealthKitSupport+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB305B7D2485E4B8007A7694 /* HealthKitSupport+Strings.swift */; };
 		EB326B4E246B16AD00FEFD08 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB326B4D246B16AD00FEFD08 /* MainTabViewController.swift */; };
@@ -59,6 +65,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E0093BB811EB38DAB3A88E2 /* Pods-WelcomingWellness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WelcomingWellness.debug.xcconfig"; path = "Target Support Files/Pods-WelcomingWellness/Pods-WelcomingWellness.debug.xcconfig"; sourceTree = "<group>"; };
+		40747A902D0E5F0047818065 /* Pods_WelcomingWellness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WelcomingWellness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		552B88C62A0F4ABA006461E0 /* ExerciseFirstChildVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseFirstChildVC.swift; sourceTree = "<group>"; };
 		552B88C82A0F4E03006461E0 /* ExerciseHeartrateChildVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseHeartrateChildVC.swift; sourceTree = "<group>"; };
 		5582FAE32A00AD6800C2D9DF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -70,11 +78,14 @@
 		575068492A1868D0006B9D78 /* ExerciseGoals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseGoals.swift; sourceTree = "<group>"; };
 		5750684B2A186A4C006B9D78 /* ChildGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildGoal.swift; sourceTree = "<group>"; };
 		5757C5B62A020534005F2D93 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		57C525172A24418300EE4C70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		57C5D2852A1168150095ECA2 /* UserHealthProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHealthProfile.swift; sourceTree = "<group>"; };
 		57C5D2872A1191B40095ECA2 /* ProfileDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataStore.swift; sourceTree = "<group>"; };
+		57F7BA0B2A24519C0000F6F8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		57F7BA132A246DC10000F6F8 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		7ACCFEC72A031A4600F255FF /* ViewSleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSleep.swift; sourceTree = "<group>"; };
 		7ACCFEC92A04BB8D00F255FF /* SleepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepViewController.swift; sourceTree = "<group>"; };
-		8037822B27C5C24067AC1EBF /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		DDAD833B2C3490E6F6CF44AC /* Pods-WelcomingWellness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WelcomingWellness.release.xcconfig"; path = "Target Support Files/Pods-WelcomingWellness/Pods-WelcomingWellness.release.xcconfig"; sourceTree = "<group>"; };
 		DDC3EAD6D9404AADDCC92FF8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DF28F24E2A11A493000E1E37 /* DietViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietViewController.swift; sourceTree = "<group>"; };
 		DF50A2C92A031276001037D5 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -121,14 +132,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB2ACB972492B2D600DEFA22 /* CareKitUI in Frameworks */,
+				57F7BA112A245CD40000F6F8 /* GoogleSignInSwift in Frameworks */,
 				F9907B09245894E600987667 /* HealthKit.framework in Frameworks */,
+				57F7BA0F2A245CD40000F6F8 /* GoogleSignIn in Frameworks */,
+				14F0DAE3F792A486DFC3E158 /* Pods_WelcomingWellness.framework in Frameworks */,
+				57F7BA0A2A244EFF0000F6F8 /* CareKitUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57F7BA122A246DA50000F6F8 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F9907AFD2458947D00987667 /* LaunchScreen.storyboard */,
+				5582FAE32A00AD6800C2D9DF /* Main.storyboard */,
+				5724EB9C2A105DB60036150A /* Main_Interaction.storyboard */,
+				57F7BA132A246DC10000F6F8 /* Login.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		58678013FC22E92E1995728A /* LICENSE */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,9 +166,17 @@
 		A84DF625EC23E377183A6CF9 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				8037822B27C5C24067AC1EBF /* SampleCode.xcconfig */,
 			);
 			name = Configuration;
+			sourceTree = "<group>";
+		};
+		B0AA39EF5CEB417A7B1E8EC6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E0093BB811EB38DAB3A88E2 /* Pods-WelcomingWellness.debug.xcconfig */,
+				DDAD833B2C3490E6F6CF44AC /* Pods-WelcomingWellness.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		EB1272342485D7BA00548CD1 /* Table View Controllers */ = {
@@ -242,6 +275,7 @@
 				552B88C82A0F4E03006461E0 /* ExerciseHeartrateChildVC.swift */,
 				575068492A1868D0006B9D78 /* ExerciseGoals.swift */,
 				5750684B2A186A4C006B9D78 /* ChildGoal.swift */,
+				57F7BA0B2A24519C0000F6F8 /* LoginViewController.swift */,
 			);
 			name = "View Controllers";
 			path = "Main View Controllers";
@@ -289,6 +323,7 @@
 				F9907B07245894E600987667 /* Frameworks */,
 				A84DF625EC23E377183A6CF9 /* Configuration */,
 				58678013FC22E92E1995728A /* LICENSE */,
+				B0AA39EF5CEB417A7B1E8EC6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -303,6 +338,8 @@
 		F9907AF12458947C00987667 /* WelcomingWellness */ = {
 			isa = PBXGroup;
 			children = (
+				57F7BA122A246DA50000F6F8 /* Storyboard */,
+				57C525172A24418300EE4C70 /* GoogleService-Info.plist */,
 				F9907AF22458947C00987667 /* AppDelegate.swift */,
 				F9907AF42458947C00987667 /* SceneDelegate.swift */,
 				EB48C1BE246B25D000AE8FE3 /* View Controllers */,
@@ -312,9 +349,6 @@
 				EB9525B82474C6B6001B5178 /* Interface */,
 				EB48C1C2246B2EBF00AE8FE3 /* Utilities */,
 				EB326B53246B258000FEFD08 /* Supporting Files */,
-				F9907AFD2458947D00987667 /* LaunchScreen.storyboard */,
-				5582FAE32A00AD6800C2D9DF /* Main.storyboard */,
-				5724EB9C2A105DB60036150A /* Main_Interaction.storyboard */,
 			);
 			path = WelcomingWellness;
 			sourceTree = "<group>";
@@ -323,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				F9907B08245894E600987667 /* HealthKit.framework */,
+				40747A902D0E5F0047818065 /* Pods_WelcomingWellness.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -334,9 +369,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9907B032458947D00987667 /* Build configuration list for PBXNativeTarget "WelcomingWellness" */;
 			buildPhases = (
+				99238C0DF004EA27624A8FDB /* [CP] Check Pods Manifest.lock */,
 				F9907AEB2458947C00987667 /* Sources */,
 				F9907AEC2458947C00987667 /* Frameworks */,
 				F9907AED2458947C00987667 /* Resources */,
+				9B90DB402214A55BC8AAA4EC /* [CP] Embed Pods Frameworks */,
+				33A74F663FFCEBF3628FDF5F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -344,7 +382,9 @@
 			);
 			name = WelcomingWellness;
 			packageProductDependencies = (
-				EB2ACB962492B2D600DEFA22 /* CareKitUI */,
+				57F7BA092A244EFF0000F6F8 /* CareKitUI */,
+				57F7BA0E2A245CD40000F6F8 /* GoogleSignIn */,
+				57F7BA102A245CD40000F6F8 /* GoogleSignInSwift */,
 			);
 			productName = WWDCDemo;
 			productReference = F9907AEF2458947C00987667 /* WelcomingWellness.app */;
@@ -377,6 +417,8 @@
 			mainGroup = F9907AE62458947B00987667;
 			packageReferences = (
 				EB2ACB952492B2D600DEFA22 /* XCRemoteSwiftPackageReference "CareKit" */,
+				57E8E2FD2A241AC3001E9DD0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				57F7BA0D2A245CD30000F6F8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = F9907AF02458947C00987667 /* Products */;
 			projectDirPath = "";
@@ -393,16 +435,77 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB1B0CAA2486D7A700724782 /* Localizable.stringsdict in Resources */,
+				57C525182A24418300EE4C70 /* GoogleService-Info.plist in Resources */,
 				5582FAE42A00AD6800C2D9DF /* Main.storyboard in Resources */,
 				F9907AFF2458947D00987667 /* LaunchScreen.storyboard in Resources */,
 				EB9525B324735827001B5178 /* MockServerResponse.json in Resources */,
 				5724EB9D2A105DB60036150A /* Main_Interaction.storyboard in Resources */,
 				5582FAE82A00DE5E00C2D9DF /* Assets.xcassets in Resources */,
 				F9907AFC2458947D00987667 /* Assets.xcassets in Resources */,
+				57F7BA142A246DC10000F6F8 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33A74F663FFCEBF3628FDF5F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WelcomingWellness/Pods-WelcomingWellness-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WelcomingWellness/Pods-WelcomingWellness-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WelcomingWellness/Pods-WelcomingWellness-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99238C0DF004EA27624A8FDB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WelcomingWellness-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B90DB402214A55BC8AAA4EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WelcomingWellness/Pods-WelcomingWellness-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WelcomingWellness/Pods-WelcomingWellness-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WelcomingWellness/Pods-WelcomingWellness-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F9907AEB2458947C00987667 /* Sources */ = {
@@ -440,6 +543,7 @@
 				7ACCFECA2A04BB8D00F255FF /* SleepViewController.swift in Sources */,
 				EB48C1CA246B3A0300AE8FE3 /* ChartViewStyle.swift in Sources */,
 				EB48C1C4246B351C00AE8FE3 /* CareKitSupport.swift in Sources */,
+				57F7BA0C2A24519C0000F6F8 /* LoginViewController.swift in Sources */,
 				DF50A2CC2A0316B9001037D5 /* LifestyleScoreView.swift in Sources */,
 				EB644F9F24730E2B00CF27F0 /* MobilityChartDataViewController.swift in Sources */,
 				5750684C2A186A4C006B9D78 /* ChildGoal.swift in Sources */,
@@ -476,7 +580,6 @@
 /* Begin XCBuildConfiguration section */
 		F9907B012458947D00987667 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8037822B27C5C24067AC1EBF /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -538,7 +641,6 @@
 		};
 		F9907B022458947D00987667 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8037822B27C5C24067AC1EBF /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -594,13 +696,14 @@
 		};
 		F9907B042458947D00987667 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8037822B27C5C24067AC1EBF /* SampleCode.xcconfig */;
+			baseConfigurationReference = 0E0093BB811EB38DAB3A88E2 /* Pods-WelcomingWellness.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "WelcomingWellness/Supporting Files/WelcomingWellness.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J84RJL837B;
 				INFOPLIST_FILE = "WelcomingWellness/Supporting Files/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -618,13 +721,14 @@
 		};
 		F9907B052458947D00987667 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8037822B27C5C24067AC1EBF /* SampleCode.xcconfig */;
+			baseConfigurationReference = DDAD833B2C3490E6F6CF44AC /* Pods-WelcomingWellness.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "WelcomingWellness/Supporting Files/WelcomingWellness.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J84RJL837B;
 				INFOPLIST_FILE = "WelcomingWellness/Supporting Files/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -664,6 +768,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		57E8E2FD2A241AC3001E9DD0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+		57F7BA0D2A245CD30000F6F8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		EB2ACB952492B2D600DEFA22 /* XCRemoteSwiftPackageReference "CareKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/carekit-apple/CareKit";
@@ -675,10 +795,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EB2ACB962492B2D600DEFA22 /* CareKitUI */ = {
+		57F7BA092A244EFF0000F6F8 /* CareKitUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EB2ACB952492B2D600DEFA22 /* XCRemoteSwiftPackageReference "CareKit" */;
 			productName = CareKitUI;
+		};
+		57F7BA0E2A245CD40000F6F8 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57F7BA0D2A245CD30000F6F8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		57F7BA102A245CD40000F6F8 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57F7BA0D2A245CD30000F6F8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

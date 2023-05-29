@@ -1,0 +1,6 @@
+framework module Pods_WelcomingWellness {
+  umbrella header "Pods-WelcomingWellness-umbrella.h"
+
+  export *
+  module * { export * }
+}
