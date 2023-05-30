@@ -30,9 +30,9 @@ class ProfileDataStore {
       let today = Date()
       let calendar = Calendar.current
       let todayDateComponents = calendar.dateComponents([.year],
-                                                        from: today)
-      let thisYear = todayDateComponents.year!
-      let age = thisYear - birthdayComponents.year!
+                                                        from: birthdayComponents.date!, to: today)
+      let age = todayDateComponents.year!
+//      let age = thisYear
       
       //3. Unwrap the wrappers to get the underlying enum values.
       let unwrappedBiologicalSex = biologicalSex.biologicalSex
