@@ -13,6 +13,9 @@
 		5582FAE42A00AD6800C2D9DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5582FAE32A00AD6800C2D9DF /* Main.storyboard */; };
 		5582FAE62A00B47700C2D9DF /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582FAE52A00B47700C2D9DF /* ExerciseViewController.swift */; };
 		5582FAE82A00DE5E00C2D9DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5582FAE72A00DE5D00C2D9DF /* Assets.xcassets */; };
+		5707AA3F2A29808E00517E92 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5707AA3E2A29808E00517E92 /* GoalsViewController.swift */; };
+		5707AA412A29863100517E92 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5707AA402A29863100517E92 /* AddressViewController.swift */; };
+		5707AA432A2ADEE900517E92 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5707AA422A2ADEE900517E92 /* FoodViewController.swift */; };
 		5724EB992A105D5C0036150A /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724EB982A105D5C0036150A /* PermissionViewController.swift */; };
 		5724EB9B2A105D630036150A /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724EB9A2A105D630036150A /* TabViewController.swift */; };
 		5724EB9D2A105DB60036150A /* Main_Interaction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5724EB9C2A105DB60036150A /* Main_Interaction.storyboard */; };
@@ -72,6 +75,9 @@
 		5582FAE32A00AD6800C2D9DF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5582FAE52A00B47700C2D9DF /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		5582FAE72A00DE5D00C2D9DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5707AA3E2A29808E00517E92 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GoalsViewController.swift; path = "WelcomingWellness/Main View Controllers/GoalsViewController.swift"; sourceTree = SOURCE_ROOT; };
+		5707AA402A29863100517E92 /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
+		5707AA422A2ADEE900517E92 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodViewController.swift; path = "WelcomingWellness/Main View Controllers/FoodViewController.swift"; sourceTree = SOURCE_ROOT; };
 		5724EB982A105D5C0036150A /* PermissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
 		5724EB9A2A105D630036150A /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		5724EB9C2A105DB60036150A /* Main_Interaction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main_Interaction.storyboard; sourceTree = "<group>"; };
@@ -259,6 +265,9 @@
 		EB48C1BE246B25D000AE8FE3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5707AA402A29863100517E92 /* AddressViewController.swift */,
+				5707AA3E2A29808E00517E92 /* GoalsViewController.swift */,
+				5707AA422A2ADEE900517E92 /* FoodViewController.swift */,
 				EB9525BF2474C9C2001B5178 /* WelcomeViewController.swift */,
 				EB9525B62474C396001B5178 /* WeeklyDataTableViewController.swift */,
 				EB644F9E24730E2B00CF27F0 /* MobilityChartDataViewController.swift */,
@@ -526,10 +535,12 @@
 				552B88C92A0F4E03006461E0 /* ExerciseHeartrateChildVC.swift in Sources */,
 				EB305B7E2485E4B8007A7694 /* HealthKitSupport+Strings.swift in Sources */,
 				EB644FA32473136500CF27F0 /* ServerResponse.swift in Sources */,
+				5707AA432A2ADEE900517E92 /* FoodViewController.swift in Sources */,
 				EB326B50246B1B5700FEFD08 /* HealthData.swift in Sources */,
 				7ACCFEC82A031A4600F255FF /* ViewSleep.swift in Sources */,
 				EB9525C22475BD41001B5178 /* HealthKitSupport.swift in Sources */,
 				EB9525BC2474C930001B5178 /* WeeklyReportTableViewController.swift in Sources */,
+				5707AA412A29863100517E92 /* AddressViewController.swift in Sources */,
 				EBEF213C2462289B0055F482 /* FeedItemCollectionViewCell.swift in Sources */,
 				DF50A2CA2A031276001037D5 /* DashboardViewController.swift in Sources */,
 				F9907AF32458947C00987667 /* AppDelegate.swift in Sources */,
@@ -547,6 +558,7 @@
 				DF50A2CC2A0316B9001037D5 /* LifestyleScoreView.swift in Sources */,
 				EB644F9F24730E2B00CF27F0 /* MobilityChartDataViewController.swift in Sources */,
 				5750684C2A186A4C006B9D78 /* ChildGoal.swift in Sources */,
+				5707AA3F2A29808E00517E92 /* GoalsViewController.swift in Sources */,
 				EB9525C02474C9C2001B5178 /* WelcomeViewController.swift in Sources */,
 				57C5D2882A1191B40095ECA2 /* ProfileDataStore.swift in Sources */,
 				5582FAE62A00B47700C2D9DF /* ExerciseViewController.swift in Sources */,

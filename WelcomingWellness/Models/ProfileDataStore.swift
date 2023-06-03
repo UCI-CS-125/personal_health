@@ -7,11 +7,39 @@
 //
 
 import HealthKit
+import FirebaseAuth
 
 class ProfileDataStore {
 
-    var firstName:String = ""
-    var lastName:String = ""
+    var name:String?
+    
+    
+    class func getNameEmailPhotoUrlUID() throws -> (name: String,
+                                             email: String,
+                                             photoURL: String,
+                                             uid: String)  {
+        let user = Auth.auth().currentUser
+        if let user = user {
+          // The user's ID, unique to the Firebase project.
+          // Do NOT use this value to authenticate with your backend server,
+          // if you have one. Use getTokenWithCompletion:completion: instead.
+          let uid = user.uid
+          let email = user.email
+          let photoURL = user.photoURL
+          var multiFactorString = "MultiFactor: "
+          for info in user.multiFactor.enrolledFactors {
+            multiFactorString += info.displayName ?? "[DispayName]"
+            multiFactorString += " "
+          }
+//            print(uid)
+//            print(email ?? "no email")
+//            print(photoURL ?? "No photo url")
+//
+//            print(multiFactorString)
+        }
+        return (user?.displayName ?? "Unknown" , user?.email ?? "No Email", user?.photoURL?.absoluteString ?? "No photourl", user?.uid ?? "No uid")
+
+    }
     
   class func getAgeSexAndBloodType() throws -> (age: Int,
                                                 biologicalSex: HKBiologicalSex,

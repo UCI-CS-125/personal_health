@@ -17,6 +17,7 @@ class PermissionViewController: UIViewController {
     @IBOutlet weak var AuthorizeButton: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
 
+    @IBOutlet weak var nextButton: UIBarButtonItem!
 
     @IBAction func pressedAuthButton(_ sender: Any) {
         requestHealthAuthorization()
@@ -26,9 +27,10 @@ class PermissionViewController: UIViewController {
     
     var healthAccess:Bool = false{
         didSet {
-            Dispatch.DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "HasHealthAccess", sender: nil)
-            }
+            self.enableNextButton()
+//            Dispatch.DispatchQueue.main.async {
+//                self.performSegue(withIdentifier: "HasHealthAccess", sender: nil)
+//            }
 //            }
             
         }
@@ -52,6 +54,11 @@ class PermissionViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationItem.rightBarButtonItem?.isEnabled = false
+        self.navigationItem.leftBarButtonItem?.isEnabled = false
+        print("Hide button")
+        print(self.navigationItem.leftBarButtonItem?.isEnabled)
+
 
     }
     
@@ -100,25 +107,21 @@ class PermissionViewController: UIViewController {
     }
     
     
+    private func enableNextButton(){
 
-    
-//    private func enableNextButton(){
-//
-//            Dispatch.DispatchQueue.main.async {
-//                if(self.healthAccess && self.firstName.hasText && self.lastName.hasText){
-//                    ProfileDataStore().lastName = self.lastName.text!
-//                    ProfileDataStore().firstName = self.firstName.text!
-//                self.nextButton.isEnabled = true
-//                self.navigationItem.rightBarButtonItem?.isEnabled = true
-//
-//                print("Next Button Enabled",self.nextButton.isEnabled)            }
-//
-//
-//        }
-//
-//
-//    }
-//
+            Dispatch.DispatchQueue.main.async {
+                self.nextButton.isEnabled = true
+                self.navigationItem.rightBarButtonItem?.isEnabled = true
+
+                print("Next Button Enabled",self.nextButton.isEnabled)
+                
+            }
+
+
+        }
+
+
+
     func requestHealthAuthorization() {
         print("Requesting HealthKit authorization...")
         

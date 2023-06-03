@@ -8,6 +8,10 @@
 
 import Foundation
 import UIKit
+import FirebaseAuth
+import FirebaseCore
+
+
 
 class TabViewController: UITabBarController {
 
@@ -16,13 +20,14 @@ class TabViewController: UITabBarController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.navigationItem.setHidesBackButton(true, animated: true)
-
     }
+
     
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(true)
             navigationController?.setNavigationBarHidden(true, animated: animated)
         print("hello tab")
+        
 
 
     }

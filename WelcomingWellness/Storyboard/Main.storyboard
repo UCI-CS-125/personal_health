@@ -86,8 +86,6 @@
                     <connections>
                         <outlet property="AuthorizeButton" destination="RoC-6B-hXc" id="6p3-yQ-7UJ"/>
                         <outlet property="descriptionLabel" destination="xiM-4U-apA" id="sXE-qk-K9j"/>
-                        <outlet property="firstName" destination="xY6-cW-zYu" id="nU4-sm-QXg"/>
-                        <outlet property="lastName" destination="v0R-Tg-gc4" id="Ybc-k2-Wu4"/>
                         <outlet property="nextButton" destination="mok-Bu-1Sv" id="aU1-N3-FMf"/>
                     </connections>
                 </viewController>
