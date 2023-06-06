@@ -593,7 +593,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="DietRestrictions" destination="ebR-Ey-R15" id="4j3-vS-FKq"/>
+                        <outlet property="DairySwitch" destination="yLk-wH-D6h" id="8ku-Ic-qKZ"/>
+                        <outlet property="DietRestrictions" destination="ebR-Ey-R15" id="dTk-GZ-cXl"/>
+                        <outlet property="GlutenSwitch" destination="Dzg-zs-WHc" id="Mnv-uq-I6f"/>
+                        <outlet property="PeanutAllergy" destination="y57-JF-dMX" id="Sas-j3-PB5"/>
                         <outlet property="tableView" destination="sw4-AZ-EUO" id="wTL-G8-KWj"/>
                     </connections>
                 </viewController>

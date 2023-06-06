@@ -925,6 +925,7 @@ DEPENDENCIES:
   - FirebaseUI/OAuth
   - FirebaseUI/Phone
   - GoogleMaps
+  - GoogleSignIn
   - GoogleUtilities
 
 SPEC REPOS:
@@ -1014,6 +1015,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
   SDWebImage: cb032eba469c54e0000e78bcb0a13cdde0a52798
 
-PODFILE CHECKSUM: 56f3a38a16b4cfbcdf6f263b3502a87e7b31ecc3
+PODFILE CHECKSUM: 9745b18857a41fe80d3550de93e100f419d4b654
 
 COCOAPODS: 1.12.0

@@ -19,6 +19,22 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var DietRestrictions: UIButton!
     
+    @IBOutlet weak var GlutenSwitch: UISwitch!
+    
+    @IBOutlet weak var PeanutAllergy: UISwitch!
+    
+    @IBOutlet weak var DairySwitch: UISwitch!
+    
+    
+    var glutenSwitchState:Bool {
+        return GlutenSwitch.isOn
+    }
+    var peanutSwitchState:Bool {
+        return PeanutAllergy.isOn
+    }
+    var dairySwitchState:Bool {
+        return DairySwitch.isOn
+    }
     
     // number of rows in table view
 
