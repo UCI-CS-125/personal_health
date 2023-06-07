@@ -30,33 +30,30 @@ class DietViewController: UIViewController, UITextFieldDelegate {
     
     var docRef: DocumentReference!
     
-    var fruitPrev: Int = 0
+    public var fruitPrev: Int = 0
+    public var vegetablePrev: Int = 0
+    public var grainPrev: Int = 0
+    public var proteinPrev: Int = 0
+    public var dairyPrev: Int = 0
     
     var val: String = ""
 //    var foods = [FoodGroup]()
 
     let db = Firestore.firestore()
     
-//    func fetchData() {
-//        print("func fetchData()")
-//        db.collection("dietData").addSnapshotListener { (querySnapshot, error) in
-//            guard let documents = querySnapshot?.documents else {
-//                print("No documents")
-//                return
-//            }
-//
-//            documents.map { (queryDocumentSnapshot) -> FoodGroup in
-//                let data = queryDocumentSnapshot.data()
-//                let fruitsPrev = data["fruits"] as? Int ?? 0
-//                let vegetablesPrev = data["vegetables"] as? Int ?? 0
-//                let grainsPrev = data["grains"] as? Int ?? 0
-//                let proteinsPrev = data["proteins"] as? Int ?? 0
-//                let dairyPrev = data["dairy"] as? Int ?? 0
-//                let fg = FoodGroup(fruitsPrev: fruitsPrev, vegetablesPrev: vegetablesPrev, grainsPrev: grainsPrev, proteinsPrev: proteinsPrev, dairyPrev: dairyPrev)
-//                return fg
-//            }
-//        }
-//    }
+    func fetchData() {
+        print("func fetchData()")
+        docRef.addSnapshotListener { (docSnapshot, error) in
+            guard let docSnapshot = docSnapshot, docSnapshot.exists else { return }
+            let myData = docSnapshot.data()
+            self.fruitPrev = myData!["fruits"] as? Int ?? 0
+            self.vegetablePrev = myData!["vegetables"] as? Int ?? 0
+            self.grainPrev = myData!["grains"] as? Int ?? 0
+            self.proteinPrev = myData!["proteins"] as? Int ?? 0
+            self.dairyPrev = myData!["dairy"] as? Int ?? 0
+//            print("fruitPrev 1: ", self.fruitPrev)
+        }
+    }
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,13 +81,15 @@ class DietViewController: UIViewController, UITextFieldDelegate {
         dateFormatter.dateFormat = "MM_dd_yyyy"
         print(dateFormatter.string(from: date))
 
+        docRef = Firestore.firestore().document("dietData/" + (dateFormatter.string(from: date)))
+        
+        fetchData()
+        
         let dietDoc = db.collection("dietData").document(dateFormatter.string(from: date))
         
         dietDoc.getDocument { (document, error) in
             if let document = document, document.exists {
                 let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-//                val = document.getCString("fruits")
-//                print("Document data: \(val)")
 //                print("Document data: \(dataDescription)")
             } else {
                 print("Document does not exist")
@@ -104,30 +103,13 @@ class DietViewController: UIViewController, UITextFieldDelegate {
             }
         }
         
-        docRef = Firestore.firestore().document("dietData/" + (dateFormatter.string(from: date)))
-
-//        var fruitPrev = 0
-        
-        // Get previously stored array from firebase
-        docRef.addSnapshotListener { (docSnapshot, error) in
-            guard let docSnapshot = docSnapshot, docSnapshot.exists else { return }
-            let myData = docSnapshot.data()
-            let fruitPrev = myData!["fruits"] as? Int ?? 0
-            let vegetablePrev = myData!["vegetables"] as? Int ?? 0
-            let grainPrev = myData!["grains"] as? Int ?? 0
-            let proteinPrev = myData!["proteins"] as? Int ?? 0
-            let dairyPrev = myData!["dairy"] as? Int ?? 0
-            print("fruitPrev 1: ", fruitPrev)
-        }
-        
         guard let fruitCal = fruit.text, !fruitCal.isEmpty else {return}
         guard let vegetableCal = vegetable.text, !vegetableCal.isEmpty else {return}
         guard let grainCal = grain.text, !grainCal.isEmpty else {return}
         guard let proteinCal = protein.text, !proteinCal.isEmpty else {return}
         guard let dairyCal = dairy.text, !dairyCal.isEmpty else {return}
-        print("fruitPrev 2: ", fruitPrev)
         
-        let dataToSave: [String: Int] = ["fruits": (Int(fruitCal) ?? 0), "vegetables": Int(vegetableCal) ?? 0, "grains": Int(grainCal) ?? 0, "proteins": Int(proteinCal) ?? 0, "dairy": Int(dairyCal) ?? 0]
+        let dataToSave: [String: Int] = ["fruits": fruitPrev+(Int(fruitCal) ?? 0), "vegetables": vegetablePrev+(Int(vegetableCal) ?? 0), "grains": grainPrev+(Int(grainCal) ?? 0), "proteins": proteinPrev+(Int(proteinCal) ?? 0), "dairy": dairyPrev+(Int(dairyCal) ?? 0)]
         docRef.setData(dataToSave) { (error) in
             if let error = error {
                 print("errror: \(error.localizedDescription)")

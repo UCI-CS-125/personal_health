@@ -10,7 +10,7 @@
 		14F0DAE3F792A486DFC3E158 /* Pods_WelcomingWellness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40747A902D0E5F0047818065 /* Pods_WelcomingWellness.framework */; };
 		552B88C72A0F4ABA006461E0 /* ExerciseFirstChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B88C62A0F4ABA006461E0 /* ExerciseFirstChildVC.swift */; };
 		552B88C92A0F4E03006461E0 /* ExerciseHeartrateChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B88C82A0F4E03006461E0 /* ExerciseHeartrateChildVC.swift */; };
-		556F42102A301FB300F10923 /* FoodGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556F420F2A301FB300F10923 /* FoodGroups.swift */; };
+		556F42122A312AAE00F10923 /* UserGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556F42112A312AAE00F10923 /* UserGoals.swift */; };
 		5582FAE42A00AD6800C2D9DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5582FAE32A00AD6800C2D9DF /* Main.storyboard */; };
 		5582FAE62A00B47700C2D9DF /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582FAE52A00B47700C2D9DF /* ExerciseViewController.swift */; };
 		5582FAE82A00DE5E00C2D9DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5582FAE72A00DE5D00C2D9DF /* Assets.xcassets */; };
@@ -73,7 +73,7 @@
 		40747A902D0E5F0047818065 /* Pods_WelcomingWellness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WelcomingWellness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		552B88C62A0F4ABA006461E0 /* ExerciseFirstChildVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseFirstChildVC.swift; sourceTree = "<group>"; };
 		552B88C82A0F4E03006461E0 /* ExerciseHeartrateChildVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseHeartrateChildVC.swift; sourceTree = "<group>"; };
-		556F420F2A301FB300F10923 /* FoodGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodGroups.swift; sourceTree = "<group>"; };
+		556F42112A312AAE00F10923 /* UserGoals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGoals.swift; sourceTree = "<group>"; };
 		5582FAE32A00AD6800C2D9DF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5582FAE52A00B47700C2D9DF /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		5582FAE72A00DE5D00C2D9DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -239,7 +239,7 @@
 				7ACCFEC72A031A4600F255FF /* ViewSleep.swift */,
 				57C5D2852A1168150095ECA2 /* UserHealthProfile.swift */,
 				57C5D2872A1191B40095ECA2 /* ProfileDataStore.swift */,
-				556F420F2A301FB300F10923 /* FoodGroups.swift */,
+				556F42112A312AAE00F10923 /* UserGoals.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -539,7 +539,6 @@
 				EB305B7E2485E4B8007A7694 /* HealthKitSupport+Strings.swift in Sources */,
 				EB644FA32473136500CF27F0 /* ServerResponse.swift in Sources */,
 				5707AA432A2ADEE900517E92 /* FoodViewController.swift in Sources */,
-				556F42102A301FB300F10923 /* FoodGroups.swift in Sources */,
 				EB326B50246B1B5700FEFD08 /* HealthData.swift in Sources */,
 				7ACCFEC82A031A4600F255FF /* ViewSleep.swift in Sources */,
 				EB9525C22475BD41001B5178 /* HealthKitSupport.swift in Sources */,
@@ -553,6 +552,7 @@
 				F9907AF52458947C00987667 /* SceneDelegate.swift in Sources */,
 				EB9525B72474C396001B5178 /* WeeklyDataTableViewController.swift in Sources */,
 				EB48C1C1246B2EB800AE8FE3 /* UIApplication+Extension.swift in Sources */,
+				556F42122A312AAE00F10923 /* UserGoals.swift in Sources */,
 				EB1272332485D5D200548CD1 /* DataTableViewController.swift in Sources */,
 				EB326B4E246B16AD00FEFD08 /* MainTabViewController.swift in Sources */,
 				7ACCFECA2A04BB8D00F255FF /* SleepViewController.swift in Sources */,

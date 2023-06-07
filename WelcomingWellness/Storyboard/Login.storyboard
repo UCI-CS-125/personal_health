@@ -454,6 +454,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEg-Bw-EK0">
+                                <rect key="frame" x="164" y="530" width="61" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="convertTextToDouble:" destination="vIN-oF-bUb" eventType="touchUpInside" id="f71-4L-uc0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UiD-7t-K3z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -467,6 +476,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="currentEnergyLevelTextField" destination="c2O-iv-kQw" id="qfW-aG-Igv"/>
+                        <outlet property="saveButton" destination="aEg-Bw-EK0" id="s4i-PJ-ItA"/>
                         <outlet property="targetCalories" destination="lqK-kx-DsU" id="3UL-Qb-olj"/>
                         <outlet property="targetEnergyLevelTextField" destination="2H5-LY-MeP" id="ztf-5Y-fz3"/>
                         <outlet property="targetHoursOfSleep" destination="7E7-km-sSG" id="59x-ps-lcB"/>
