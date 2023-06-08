@@ -10,6 +10,8 @@ import Foundation
 
 import UIKit
 import HealthKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class GoalsViewController: UIViewController{
 
@@ -37,13 +39,11 @@ class GoalsViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("targetCalorieLevel 1: ", targetCalorieLevel)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.hideKeyboardWhenTappedAround()
-        print("targetCalorieLevel 2: ", targetCalorieLevel)
     }
     @IBAction func convertTextToDouble(_ sender: Any){
         let theText = targetWeightTextField.text ?? ""
@@ -61,10 +61,40 @@ class GoalsViewController: UIViewController{
         let targetCalorie = targetCalories.text ?? ""
         self.targetCalorieLevel = Double(targetCalorie) ?? 0.0
         
-        print("targetCalorieLevel 3: ", targetCalorieLevel)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let db = Firestore.firestore()
+        if Auth.auth().currentUser != nil {
+            do{
+                let ref = db.collection("users").document(try ProfileDataStore.getNameEmailPhotoUrlUID().uid).collection("goals").document("Physical Goals")
+                    ref.setData([
+                        "Target Weight":self.targetWeight,
+                        "Target Energy Level":self.targetEnergyLevel,
+                        "Current Energy Level": self.currentEnergyLevel,
+                        "Target Sleep Level": self.targetSleepLevel,
+                        "Target Calorie Level": self.targetSleepLevel
+
+                    ])
+                    { err in
+                        if let err = err {
+                            print("Error updating document: \(err)")
+                        } else {
+                            print("Document successfully updated")
+                        }
+                    }
+
+                    
+                }catch let error {
+                    assertionFailure(error.localizedDescription)
+                  }
+        } else {
+          assertionFailure("No valid User")
+        }
+
+    }
 }
+    
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))

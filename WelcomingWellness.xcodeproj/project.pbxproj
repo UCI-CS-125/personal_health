@@ -33,6 +33,8 @@
 		57F7BA142A246DC10000F6F8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57F7BA132A246DC10000F6F8 /* Login.storyboard */; };
 		7ACCFEC82A031A4600F255FF /* ViewSleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACCFEC72A031A4600F255FF /* ViewSleep.swift */; };
 		7ACCFECA2A04BB8D00F255FF /* SleepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACCFEC92A04BB8D00F255FF /* SleepViewController.swift */; };
+		7AD9DA0C2A311B3C00C3C26A /* SleepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD9DA0B2A311B3C00C3C26A /* SleepViewModel.swift */; };
+		7AD9DA0E2A311E9B00C3C26A /* SleepContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD9DA0D2A311E9B00C3C26A /* SleepContentView.swift */; };
 		DF28F24F2A11A493000E1E37 /* DietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF28F24E2A11A493000E1E37 /* DietViewController.swift */; };
 		DF50A2CA2A031276001037D5 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50A2C92A031276001037D5 /* DashboardViewController.swift */; };
 		DF50A2CC2A0316B9001037D5 /* LifestyleScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50A2CB2A0316B9001037D5 /* LifestyleScoreView.swift */; };
@@ -93,6 +95,8 @@
 		57F7BA132A246DC10000F6F8 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		7ACCFEC72A031A4600F255FF /* ViewSleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSleep.swift; sourceTree = "<group>"; };
 		7ACCFEC92A04BB8D00F255FF /* SleepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepViewController.swift; sourceTree = "<group>"; };
+		7AD9DA0B2A311B3C00C3C26A /* SleepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepViewModel.swift; sourceTree = "<group>"; };
+		7AD9DA0D2A311E9B00C3C26A /* SleepContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepContentView.swift; sourceTree = "<group>"; };
 		DDAD833B2C3490E6F6CF44AC /* Pods-WelcomingWellness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WelcomingWellness.release.xcconfig"; path = "Target Support Files/Pods-WelcomingWellness/Pods-WelcomingWellness.release.xcconfig"; sourceTree = "<group>"; };
 		DDC3EAD6D9404AADDCC92FF8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DF28F24E2A11A493000E1E37 /* DietViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietViewController.swift; sourceTree = "<group>"; };
@@ -282,6 +286,8 @@
 				5757C5B62A020534005F2D93 /* ProfileViewController.swift */,
 				5724EB9A2A105D630036150A /* TabViewController.swift */,
 				7ACCFEC92A04BB8D00F255FF /* SleepViewController.swift */,
+				7AD9DA0D2A311E9B00C3C26A /* SleepContentView.swift */,
+				7AD9DA0B2A311B3C00C3C26A /* SleepViewModel.swift */,
 				5724EB982A105D5C0036150A /* PermissionViewController.swift */,
 				552B88C62A0F4ABA006461E0 /* ExerciseFirstChildVC.swift */,
 				552B88C82A0F4E03006461E0 /* ExerciseHeartrateChildVC.swift */,
@@ -534,6 +540,7 @@
 				5757C5B72A020534005F2D93 /* ProfileViewController.swift in Sources */,
 				EB9525B52474C282001B5178 /* HealthDataTableViewController.swift in Sources */,
 				DF28F24F2A11A493000E1E37 /* DietViewController.swift in Sources */,
+				7AD9DA0E2A311E9B00C3C26A /* SleepContentView.swift in Sources */,
 				EB305B7C2485D99B007A7694 /* HealthQueryTableViewController.swift in Sources */,
 				552B88C92A0F4E03006461E0 /* ExerciseHeartrateChildVC.swift in Sources */,
 				EB305B7E2485E4B8007A7694 /* HealthKitSupport+Strings.swift in Sources */,
@@ -551,6 +558,7 @@
 				57C5D2862A1168150095ECA2 /* UserHealthProfile.swift in Sources */,
 				F9907AF52458947C00987667 /* SceneDelegate.swift in Sources */,
 				EB9525B72474C396001B5178 /* WeeklyDataTableViewController.swift in Sources */,
+				7AD9DA0C2A311B3C00C3C26A /* SleepViewModel.swift in Sources */,
 				EB48C1C1246B2EB800AE8FE3 /* UIApplication+Extension.swift in Sources */,
 				556F42122A312AAE00F10923 /* UserGoals.swift in Sources */,
 				EB1272332485D5D200548CD1 /* DataTableViewController.swift in Sources */,
@@ -717,7 +725,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "WelcomingWellness/Supporting Files/WelcomingWellness.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z99RHNG9DQ;
+				DEVELOPMENT_TEAM = 7MF92A6X9D;
 				INFOPLIST_FILE = "WelcomingWellness/Supporting Files/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -727,7 +735,7 @@
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.cs125.WelcomingWellness;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cs125.WelcomingWellness2;
 				PRODUCT_NAME = WelcomingWellness;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -742,7 +750,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "WelcomingWellness/Supporting Files/WelcomingWellness.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z99RHNG9DQ;
+				DEVELOPMENT_TEAM = 7MF92A6X9D;
 				INFOPLIST_FILE = "WelcomingWellness/Supporting Files/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -752,7 +760,7 @@
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.cs125.WelcomingWellness;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cs125.WelcomingWellness2;
 				PRODUCT_NAME = WelcomingWellness;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

@@ -83,6 +83,10 @@ extension LoginViewController: FUIAuthDelegate {
                   if let document = document, document.exists {
                       self.newUser = false
                       print("existing user")
+
+                  } else {
+                      self.newUser = true
+                      print("New User")
                       ref!.setData([
                         "name": user?.displayName ?? "[Display Name]",
                       ])
@@ -93,9 +97,6 @@ extension LoginViewController: FUIAuthDelegate {
                               print("Document successfully written!")
                           }
                       }
-                  } else {
-                      self.newUser = true
-                      print("New User")
                   }
                   
                   print(self.newUser)
