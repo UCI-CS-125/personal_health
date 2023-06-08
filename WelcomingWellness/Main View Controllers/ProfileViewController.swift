@@ -1,6 +1,6 @@
 //
 //  ExerciseViewController.swift
-//  SmoothWalker
+//  WelcomingWellness
 //
 //  Created by Jason on 5/2/23.
 //  Copyright © 2023 Apple. All rights reserved.

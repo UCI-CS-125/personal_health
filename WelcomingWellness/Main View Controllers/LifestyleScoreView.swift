@@ -1,6 +1,6 @@
 //
 //  CircularProgressView.swift
-//  SmoothWalker
+//  WelcomingWellness
 //
 //  Created by Serena Rupani on 5/3/23.
 //  Copyright © 2023 Apple. All rights reserved.

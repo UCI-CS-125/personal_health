@@ -1,6 +1,6 @@
 //
 //  TabViewController.swift
-//  SmoothWalker
+//  WelcomingWellness
 //
 //  Created by Jason Wong on 5/11/23.
 //  Copyright © 2023 Apple. All rights reserved.

@@ -7,6 +7,9 @@ A collection view controller that displays charts for mobility health data.
 
 import UIKit
 import HealthKit
+import FirebaseAuth
+import FirebaseFirestore
+import FirebaseDatabase
 
 /// A representation of health data related to mobility.
 class MobilityChartDataViewController: DataTypeCollectionViewController {
@@ -19,6 +22,11 @@ class MobilityChartDataViewController: DataTypeCollectionViewController {
     ]
     
     var queries: [HKAnchoredObjectQuery] = []
+    
+    
+    var docRef: DocumentReference!
+    var docRef2: DocumentReference!
+    let db = Firestore.firestore()
     
     // MARK: - View Life Cycle
     
@@ -124,7 +132,7 @@ class MobilityChartDataViewController: DataTypeCollectionViewController {
             
             // Process data.
             let statisticsOptions = getStatisticsOptions(for: item.dataTypeIdentifier)
-            let initialResultsHandler: (HKStatisticsCollection) -> Void = { (statisticsCollection) in
+            let initialResultsHandler: (HKStatisticsCollection) -> Void = { [self] (statisticsCollection) in
                 var values: [Double] = []
                 statisticsCollection.enumerateStatistics(from: startDate, to: endDate) { (statistics, stop) in
                     let statisticsQuantity = getStatisticsQuantity(for: statistics, with: statisticsOptions)
@@ -135,6 +143,90 @@ class MobilityChartDataViewController: DataTypeCollectionViewController {
                 }
                 
                 self.data[index].values = values
+                
+                let date = Date()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "MM_dd_yyyy"
+                
+                docRef = Firestore.firestore().document("exerciseData/" + (dateFormatter.string(from: date)))
+                
+                docRef2 = Firestore.firestore().document("lifeStyleData/" + (dateFormatter.string(from: date)))
+                
+                let exerciseDoc = self.db.collection("exerciseData").document(dateFormatter.string(from: date))
+                
+                let lifeStyleDoc = self.db.collection("lifeStyleData").document(dateFormatter.string(from: date))
+                
+                
+                exerciseDoc.getDocument { (document, error) in
+                    if let document = document, document.exists {
+                        let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+        //                print("Document data: \(dataDescription)")
+                    } else {
+                        print("Document does not exist")
+                        self.db.collection("exerciseData").document(dateFormatter.string(from: date)).setData([:]) { err in
+                                if let err = err {
+                                    print("Error writing doc: \(err)")
+                                } else {
+                                    print("Doc successfully created")
+                                }
+                            }
+                    }
+                }
+                
+                for element in values {
+                  print(element)
+                }
+                let sum = values.reduce(0, +)
+                print("total dist ", sum)
+                let today_dist = values[6]
+                print("today_dist", today_dist)
+                let meters_to_walk = 3218.69
+                var get_exercise_score_daily = today_dist / meters_to_walk
+                print("get_exercise_score_daily", get_exercise_score_daily)
+                if get_exercise_score_daily > 1 {
+                    get_exercise_score_daily = 1.00
+                }
+                
+                let dataToSave: [String: Any] = ["exerciseLifeScore": get_exercise_score_daily]
+                docRef.setData(dataToSave) { (error) in
+                    if let error = error {
+                        print("errror: \(error.localizedDescription)")
+                    } else {
+                        print("Exercise Data has been saved")
+                    }
+                }
+                
+                
+                lifeStyleDoc.getDocument { (document, error) in
+                    if let document = document, document.exists {
+                        let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+        //                print("Document data: \(dataDescription)")
+                    } else {
+                        print("Document does not exist")
+                        self.db.collection("lifeStyleData").document(dateFormatter.string(from: date)).setData(["exercise": get_exercise_score_daily]) { err in
+                                if let err = err {
+                                    print("Error writing doc: \(err)")
+                                } else {
+                                    print("Doc successfully created")
+                                }
+                            }
+                    }
+                }
+                
+                
+              
+                
+                /*let dataToSave2: [String: Any] = ["exercise": get_exercise_score_daily]
+                docRef2.setData(dataToSave2) { (error) in
+                    if let error = error {
+                        print("errror: \(error.localizedDescription)")
+                    } else {
+                        print("Exercise Data 2 has been saved")
+                    }
+                }*/
+                
+                docRef2.updateData(["exercise": get_exercise_score_daily])
+            
                 
                 completion()
             }

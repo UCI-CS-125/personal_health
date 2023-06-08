@@ -1,6 +1,6 @@
 //
 //  PermissionViewController.swift
-//  SmoothWalker
+//  WelcomingWellness
 //
 //  Created by Jason Wong on 5/10/23.
 //  Copyright © 2023 Apple. All rights reserved.
