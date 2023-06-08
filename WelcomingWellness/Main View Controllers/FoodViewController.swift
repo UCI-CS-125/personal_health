@@ -8,15 +8,11 @@
 
 import Foundation
 import UIKit
-class FoodViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    let food: [String] = ["Beef", "Chicken", "Tofu", "Sheep", "Goat", "Brussel Sprouts", "Kale"]
-    // cell reuse id (cells that scroll out of view can be reused)
-    let cellReuseIdentifier = "cell"
-    // don't forget to hook this up from the storyboard
-    @IBOutlet var tableView: UITableView!
-    
-    
+import FirebaseAuth
+import FirebaseFirestore
+
+class FoodViewController: UIViewController {
+    var dietType: String = "No Preference"
     @IBOutlet weak var DietRestrictions: UIButton!
     
     @IBOutlet weak var GlutenSwitch: UISwitch!
@@ -25,7 +21,13 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var DairySwitch: UISwitch!
     
+    @IBOutlet weak var TreeNuts: UISwitch!
     
+    @IBOutlet weak var Seasme: UISwitch!
+    @IBOutlet weak var Shellfish: UISwitch!
+    @IBOutlet weak var Fish: UISwitch!
+    @IBOutlet weak var Wheat: UISwitch!
+    @IBOutlet weak var Eggs: UISwitch!
     var glutenSwitchState:Bool {
         return GlutenSwitch.isOn
     }
@@ -35,43 +37,32 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
     var dairySwitchState:Bool {
         return DairySwitch.isOn
     }
-    
-    // number of rows in table view
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.food.count
+    var treeNutsSwitchState:Bool {
+        return TreeNuts.isOn
     }
-    
-    
-    // create a cell for each table view row
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        // create a new cell if needed or reuse an old one
-        let cell:UITableViewCell = (self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell?)!
-        
-        // set the text from the data model
-        cell.textLabel?.text = self.food[indexPath.row]
-        
-        return cell
+    var seasmeSwitch:Bool {
+        return Seasme.isOn
     }
-    
-    // method to run when table view cell is tapped
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tapped cell number \(indexPath.row).")
+    var shellfishSwitchState:Bool {
+        return Shellfish.isOn
+    }
+    var fishSwitchState:Bool {
+        return Fish.isOn
+    }
+    var wheatState:Bool {
+        return Wheat.isOn
+    }
+    var eggState:Bool {
+        return Eggs.isOn
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.isEditing = true
-        // Register the table view cell class and its reuse id
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
-        
-        // (optional) include this line if you want to remove the extra empty cell divider lines
-         self.tableView.tableFooterView = UIView()
 
         // This view controller itself will provide the delegate methods and row data for the table view.
         let optionsClosure = { (action: UIAction) in
           print(action.title)
+            self.dietType = action.title
         }
         DietRestrictions.menu = UIMenu(children: [
           UIAction(title: "No Preference", state: .on, handler: optionsClosure),
@@ -79,8 +70,42 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
           UIAction(title: "Vegan", handler: optionsClosure)
         ])
         
-        tableView.delegate = self
-        tableView.dataSource = self
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let db = Firestore.firestore()
+        if Auth.auth().currentUser != nil {
+            do{
+                let ref = db.collection("users").document(try ProfileDataStore.getNameEmailPhotoUrlUID().uid).collection("diet").document("restrictions")
+                    ref.setData([
+                        "Allegries":[
+                        "Gluten Allergy":self.glutenSwitchState,
+                        "Peanut Allergy":self.peanutSwitchState,
+                        "TreeNut Allergy":self.treeNutsSwitchState,
+                        "Seasme Allergy":self.seasmeSwitch,
+                        "Shellfish Allergy":self.shellfishSwitchState,
+                        "Fish Allergy":self.fishSwitchState,
+                        "Wheat Allergy":self.wheatState,
+                        "Eggs Allergy":self.eggState],
+                        "DietType": self.dietType
+                        
+                    ])
+                    { err in
+                        if let err = err {
+                            print("Error updating document: \(err)")
+                        } else {
+                            print("Document successfully updated")
+                        }
+                    }
+
+                    
+                }catch let error {
+                    assertionFailure(error.localizedDescription)
+                  }
+        } else {
+          assertionFailure("No valid User")
+        }
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

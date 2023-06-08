@@ -47,31 +47,37 @@ class ProfileViewController: UITableViewController {
     let db = Firestore.firestore()
 
   private let userHealthProfile = UserHealthProfile()
-  
   private func updateHealthInfo() {
     loadAndDisplayAgeSexAndBloodType()
     loadAndDisplayMostRecentWeight()
     loadAndDisplayMostRecentHeight()
+      
   }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("View Loaded")
-        updateHealthInfo()
         loadName()
-        syncHealthWithFirestore()
+        updateHealthInfo()
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        syncHealthWithFirestore()
+     }
     private func syncHealthWithFirestore(){
+        print("Labels")
+        print(heightLabel.text)
         let user = Auth.auth().currentUser
         if user != nil {
             do {
                 let ref = self.db.collection("users").document(try ProfileDataStore.getNameEmailPhotoUrlUID().uid)
                 ref.updateData([
-                    "age": userHealthProfile.age ??  -1,
+                    "age": self.userHealthProfile.age ??  -1,
                     "sex" : self.convertHKBiologicalSexToString(),
                     "bloodType":  convertHKBloodTypeToString(),
-                    "height" : userHealthProfile.heightInMeters ?? -1,
-                    "weight": userHealthProfile.weightInKilograms ?? -1
+                    "height" : heightLabel.text,//janky
+                    "weight": weightLabel.text, //janky
                 ])
                 { err in
                     if let err = err {
