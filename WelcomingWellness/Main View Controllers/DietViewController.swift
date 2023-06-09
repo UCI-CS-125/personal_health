@@ -11,6 +11,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import FirebaseDatabase
+import CoreML
 
 class DietViewController: UIViewController, UITextFieldDelegate {
     public var dietDict: [Int:Dictionary] = [
@@ -239,8 +240,56 @@ class DietViewController: UIViewController, UITextFieldDelegate {
         }*/
        
        docRef2.updateData(["diet": dietLifestyleScore])
+//       getRecommendation()
    }
    
+    func getRecommendation() {
+        do {
+            let config = MLModelConfiguration()
+            let model = try UpdatableKNN(configuration: config)
+            let target_calories = self.calcuate_target_cal("Female", 100, 5,6, 28, "Moderate exercise (3-5 days/wk)")
+            let prediction = try model.prediction(input: [target_calories,Int.random(in: 10..<30),
+                                                          Int.random(in: 0..<4),
+                                                          Int.random(in: 0..<30),
+                                                          Int.random(in: 0..<400),
+                                                          Int.random(in: 40..<75),
+                                                          Int.random(in: 4..<10),
+                                                          Int.random(in: 0..<10),
+                                                          Int.random(in: 30..<100),])
+            print(prediction)
+        } catch {
+            print("Error in prediction")
+        }
+    }
+    
+    func calcuate_target_cal(gender:String, weight:Float, height:Float, age:Int, activity: String){
+
+        func calculate_bmr() -> Int{
+            var bmr = 0
+            if (gender == "Male"){
+                bmr = 10 * weight + 6.25 * height - 5 * age + 5
+            }else{
+                bmr = 10 * weight + 6.25 * height - 5 * age - 161
+            }
+            return bmr
+        }
+
+
+        func calories_calculator() -> Float{
+            activities = [
+                "Little/no exercise",
+                "Light exercise",
+                "Moderate exercise (3-5 days/wk)",
+                "Very active (6-7 days/wk)",
+                "Extra active (very active & physical job)",
+            ]
+            weights = [1.2, 1.375, 1.55, 1.725, 1.9]
+            weight = weights[activities.index(self.activity)]
+            maintain_calories = self.calculate_bmr() * weight
+            return maintain_calories
+        }
+    }
+    
    @IBAction func buttonClicked(_ sender: Any) {
        print("Button tapped")
        fetchData()
