@@ -175,9 +175,9 @@ class DietViewController: UIViewController, UITextFieldDelegate {
         self.currP = Double((proteinPrev+(Int(proteinCal) ?? 0)))/Double(targetP)
         self.currD = Double((dairyPrev+(Int(dairyCal) ?? 0)))/Double(targetD)
         
-        let total = targetF+targetV+targetG+targetP+targetD
+        //let total = targetF+targetV+targetG+targetP+targetD
         let currsss = currF+currV+currG+currP+currD
-        var dietLifestyleScore = currsss/Double(total)
+        var dietLifestyleScore = currsss/5.00
         
         if dietLifestyleScore > 1 {
             dietLifestyleScore = 1.00
