@@ -247,7 +247,7 @@ class DietViewController: UIViewController, UITextFieldDelegate {
         do {
             let config = MLModelConfiguration()
             let model = try UpdatableKNN(configuration: config)
-            let target_calories = self.calcuate_target_cal("Female", 100, 5,6, 28, "Moderate exercise (3-5 days/wk)")
+            let target_calories = self.calcuate_target_cal(gender: "Female", weight: 100, height: 5.6, age: 28, activity: "Moderate exercise (3-5 days/wk)")
             let prediction = try model.prediction(input: [target_calories,Int.random(in: 10..<30),
                                                           Int.random(in: 0..<4),
                                                           Int.random(in: 0..<30),
@@ -262,30 +262,36 @@ class DietViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func calcuate_target_cal(gender:String, weight:Float, height:Float, age:Int, activity: String){
+    func calcuate_target_cal(gender:String, weight:Double, height:Double, age:Int, activity: String){
 
-        func calculate_bmr() -> Int{
-            var bmr = 0
+        func calculate_bmr() -> Double{
+            var bmr = 0.0
             if (gender == "Male"){
-                bmr = 10 * weight + 6.25 * height - 5 * age + 5
+                bmr = 10 * weight
+                bmr = bmr + 6.25 * height - 5
+                bmr = bmr * Double(age) + 5
             }else{
-                bmr = 10 * weight + 6.25 * height - 5 * age - 161
+                bmr = 10 * weight
+                bmr = bmr + 6.25 * height - 5
+                bmr = bmr * Double(age) - 161
+                
+//                bmr = 10 * weight + 6.25 * height - 5 * age - 161
             }
             return bmr
         }
 
 
-        func calories_calculator() -> Float{
-            activities = [
+        func calories_calculator() -> Double{
+            let activities = [
                 "Little/no exercise",
                 "Light exercise",
                 "Moderate exercise (3-5 days/wk)",
                 "Very active (6-7 days/wk)",
                 "Extra active (very active & physical job)",
             ]
-            weights = [1.2, 1.375, 1.55, 1.725, 1.9]
-            weight = weights[activities.index(self.activity)]
-            maintain_calories = self.calculate_bmr() * weight
+            let weights = [1.2, 1.375, 1.55, 1.725, 1.9]
+            let weight = weights[activities.firstIndex(of: activity) ?? 3]
+            let maintain_calories = calculate_bmr() * weight
             return maintain_calories
         }
     }
