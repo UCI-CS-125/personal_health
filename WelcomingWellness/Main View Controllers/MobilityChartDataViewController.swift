@@ -144,6 +144,8 @@ class MobilityChartDataViewController: DataTypeCollectionViewController {
                 
                 self.data[index].values = values
                 
+                print("exercise values: ", values)
+                
                 let date = Date()
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "MM_dd_yyyy"
