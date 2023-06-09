@@ -5,6 +5,7 @@
 //  Copyright © 2023 Apple. All rights reserved.
 //
 
+import CoreML
 import UIKit
 import SwiftUI
 import Charts
@@ -26,6 +27,8 @@ class SleepViewController: UIViewController {
     let db = Firestore.firestore()
     
     public var hoursHelp: Int = 0
+    public var wakeupHour: Int = 0
+    public var wakeupMin: Int = 0
     
     func getCurrentDay () -> String!{
         let date = Date()
@@ -98,8 +101,6 @@ class SleepViewController: UIViewController {
                     }
             }
         }
-        
-        docRef2.updateData(["sleep": sleep_score])
     }
     
     @IBOutlet weak var dateTextField: UITextField!
@@ -118,6 +119,8 @@ class SleepViewController: UIViewController {
         let dataToSave: [String: Any] = ["date": dateText, "hours" : (hoursText), "wakeup hour" : wakeupHourText, "wakeup minute" : wakeupMinText]
         
         self.hoursHelp = Int(hoursText) ?? 0
+        self.wakeupHour = Int(wakeupHourText) ?? 0
+        self.wakeupMin = Int(wakeupMinText) ?? 0
         
         fetchData()
 
@@ -128,6 +131,45 @@ class SleepViewController: UIViewController {
             } else {
                 print("Woohoo! Sleep hours have been stored!")
             }
+        }
+        
+        getRecommendation()
+    }
+    
+    func getRecommendation() {
+        do {
+            let config = MLModelConfiguration()
+            let model = try SleepRec(configuration: config)
+            let hour = self.wakeupHour * 60 * 60
+            let min = self.wakeupMin * 60
+            let prediction = try model.prediction(wake: Double(hour + min), estimatedSleep: Double(self.hoursHelp), coffee: 0.0)
+            var sleepTime = Double(hour + min) - prediction.actualSleep
+            let number = Int.random(in: 86200 ..< 86600)
+//            print("Number: \(number)")
+            sleepTime = Double(number) - sleepTime
+            let mini = (sleepTime/60)
+            let houry = Int(mini/60)
+            let pred = String(houry) + ":" + String(Int(mini-(Double(houry*60)))) + " PM"
+            print("prediction: ", sleepTime, "; ", "pred: ", pred)
+            docRef = Firestore.firestore().document("recommendationsData/" + (getCurrentDay2()))
+            let recsDoc = self.db.collection("recommendationsData").document(getCurrentDay2())
+            recsDoc.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                    self.docRef.updateData(["sleepRec": pred])
+                } else {
+                    print("Document does not exist")
+                    self.db.collection("recommendationsData").document(self.getCurrentDay2()).setData(["sleepRec": pred]) { err in
+                            if let err = err {
+                                print("Error writing doc: \(err)")
+                            } else {
+                                print("Doc successfully created")
+                            }
+                        }
+                }
+            }
+        } catch {
+            print("Error in prediction")
         }
     }
     

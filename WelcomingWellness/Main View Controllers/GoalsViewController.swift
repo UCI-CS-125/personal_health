@@ -73,7 +73,7 @@ class GoalsViewController: UIViewController{
                         "Target Energy Level":self.targetEnergyLevel,
                         "Current Energy Level": self.currentEnergyLevel,
                         "Target Sleep Level": self.targetSleepLevel,
-                        "Target Calorie Level": self.targetSleepLevel
+                        "Target Calorie Level": self.targetCalorieLevel
 
                     ])
                     { err in
