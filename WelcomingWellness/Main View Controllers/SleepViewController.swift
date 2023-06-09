@@ -43,6 +43,8 @@ class SleepViewController: UIViewController {
     
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var hoursSleptTextField: UITextField!
+    @IBOutlet weak var wakeupHourTextField: UITextField!
+    @IBOutlet weak var wakeupMinuteTextField: UITextField!
     
     var docRef : DocumentReference!
     var docRef2 : DocumentReference!
@@ -50,7 +52,9 @@ class SleepViewController: UIViewController {
     @IBAction func saver(_ sender: UIButton) {
         guard let dateText =  dateTextField.text, !dateText.isEmpty else {return}
         guard let hoursText =  hoursSleptTextField.text, !hoursText.isEmpty else {return}
-        let dataToSave: [String: Any] = ["date": dateText, "hours" : (hoursText)]
+        guard let wakeupHourText = wakeupHourTextField.text, !wakeupHourText.isEmpty else {return}
+        guard let wakeupMinText = wakeupMinuteTextField.text, !wakeupMinText.isEmpty else {return}
+        let dataToSave: [String: Any] = ["date": dateText, "hours" : (hoursText), "wakeup hour" : wakeupHourText, "wakeup minute" : wakeupMinText]
         
 //        docRef.setData(dataToSave) { (error) in
 //            if let error = error {
@@ -114,7 +118,6 @@ class SleepViewController: UIViewController {
     }
     
     @objc override func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
     

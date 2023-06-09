@@ -92,6 +92,13 @@ class DietViewController: UIViewController, UITextFieldDelegate {
         protein.text = "0"
         dairy.text = "0"
         
+        let tap = UITapGestureRecognizer(target: self, action: #selector(SleepViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+    }
+    
+    @objc override func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     func getTargets() {
