@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14F0DAE3F792A486DFC3E158 /* Pods_WelcomingWellness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40747A902D0E5F0047818065 /* Pods_WelcomingWellness.framework */; };
-		552B88C72A0F4ABA006461E0 /* ExerciseFirstChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B88C62A0F4ABA006461E0 /* ExerciseFirstChildVC.swift */; };
 		552B88C92A0F4E03006461E0 /* ExerciseHeartrateChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B88C82A0F4E03006461E0 /* ExerciseHeartrateChildVC.swift */; };
-		556F42122A312AAE00F10923 /* UserGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556F42112A312AAE00F10923 /* UserGoals.swift */; };
 		5582FAE42A00AD6800C2D9DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5582FAE32A00AD6800C2D9DF /* Main.storyboard */; };
 		5582FAE62A00B47700C2D9DF /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5582FAE52A00B47700C2D9DF /* ExerciseViewController.swift */; };
 		5582FAE82A00DE5E00C2D9DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5582FAE72A00DE5D00C2D9DF /* Assets.xcassets */; };
@@ -73,9 +71,7 @@
 /* Begin PBXFileReference section */
 		0E0093BB811EB38DAB3A88E2 /* Pods-WelcomingWellness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WelcomingWellness.debug.xcconfig"; path = "Target Support Files/Pods-WelcomingWellness/Pods-WelcomingWellness.debug.xcconfig"; sourceTree = "<group>"; };
 		40747A902D0E5F0047818065 /* Pods_WelcomingWellness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WelcomingWellness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		552B88C62A0F4ABA006461E0 /* ExerciseFirstChildVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseFirstChildVC.swift; sourceTree = "<group>"; };
 		552B88C82A0F4E03006461E0 /* ExerciseHeartrateChildVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseHeartrateChildVC.swift; sourceTree = "<group>"; };
-		556F42112A312AAE00F10923 /* UserGoals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGoals.swift; sourceTree = "<group>"; };
 		5582FAE32A00AD6800C2D9DF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5582FAE52A00B47700C2D9DF /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		5582FAE72A00DE5D00C2D9DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -155,6 +151,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		558E26C12A32DF7200943428 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
 		57F7BA122A246DA50000F6F8 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,7 +246,6 @@
 				7ACCFEC72A031A4600F255FF /* ViewSleep.swift */,
 				57C5D2852A1168150095ECA2 /* UserHealthProfile.swift */,
 				57C5D2872A1191B40095ECA2 /* ProfileDataStore.swift */,
-				556F42112A312AAE00F10923 /* UserGoals.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -289,7 +291,6 @@
 				7AD9DA0D2A311E9B00C3C26A /* SleepContentView.swift */,
 				7AD9DA0B2A311B3C00C3C26A /* SleepViewModel.swift */,
 				5724EB982A105D5C0036150A /* PermissionViewController.swift */,
-				552B88C62A0F4ABA006461E0 /* ExerciseFirstChildVC.swift */,
 				552B88C82A0F4E03006461E0 /* ExerciseHeartrateChildVC.swift */,
 				575068492A1868D0006B9D78 /* ExerciseGoals.swift */,
 				5750684B2A186A4C006B9D78 /* ChildGoal.swift */,
@@ -356,6 +357,7 @@
 		F9907AF12458947C00987667 /* WelcomingWellness */ = {
 			isa = PBXGroup;
 			children = (
+				558E26C12A32DF7200943428 /* Backend */,
 				578C4F192A2AF55600F3AC1F /* GoogleService-Info.plist */,
 				57F7BA122A246DA50000F6F8 /* Storyboard */,
 				F9907AF22458947C00987667 /* AppDelegate.swift */,
@@ -554,13 +556,11 @@
 				EBEF213C2462289B0055F482 /* FeedItemCollectionViewCell.swift in Sources */,
 				DF50A2CA2A031276001037D5 /* DashboardViewController.swift in Sources */,
 				F9907AF32458947C00987667 /* AppDelegate.swift in Sources */,
-				552B88C72A0F4ABA006461E0 /* ExerciseFirstChildVC.swift in Sources */,
 				57C5D2862A1168150095ECA2 /* UserHealthProfile.swift in Sources */,
 				F9907AF52458947C00987667 /* SceneDelegate.swift in Sources */,
 				EB9525B72474C396001B5178 /* WeeklyDataTableViewController.swift in Sources */,
 				7AD9DA0C2A311B3C00C3C26A /* SleepViewModel.swift in Sources */,
 				EB48C1C1246B2EB800AE8FE3 /* UIApplication+Extension.swift in Sources */,
-				556F42122A312AAE00F10923 /* UserGoals.swift in Sources */,
 				EB1272332485D5D200548CD1 /* DataTableViewController.swift in Sources */,
 				EB326B4E246B16AD00FEFD08 /* MainTabViewController.swift in Sources */,
 				7ACCFECA2A04BB8D00F255FF /* SleepViewController.swift in Sources */,
@@ -725,7 +725,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "WelcomingWellness/Supporting Files/WelcomingWellness.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S67JS4AUN7;
+				DEVELOPMENT_TEAM = Z99RHNG9DQ;
 				INFOPLIST_FILE = "WelcomingWellness/Supporting Files/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -735,7 +735,7 @@
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.cs125.WelcomingWellness1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cs125.WelcomingWellness;
 				PRODUCT_NAME = WelcomingWellness;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
