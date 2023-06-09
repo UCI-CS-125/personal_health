@@ -1,9 +1,12 @@
-/*
-See LICENSE folder for this sample’s licensing information.
+//
+//  WeeklyDataTableViewController.swift
+//  WelcomingWellness
+//
+//  Copyright © 2023 Apple. All rights reserved.
+//
+//Abstract:
+//A view controller that displays quantity sample statistics for the week.
 
-Abstract:
-A view controller that displays quantity sample statistics for the week.
-*/
 
 import UIKit
 import HealthKit

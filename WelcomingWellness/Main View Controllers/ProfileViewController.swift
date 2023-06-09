@@ -1,5 +1,5 @@
 //
-//  ExerciseViewController.swift
+//  ProfileViewController.swift
 //  WelcomingWellness
 //
 //  Created by Jason on 5/2/23.
