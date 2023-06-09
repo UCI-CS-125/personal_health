@@ -177,7 +177,11 @@ class DietViewController: UIViewController, UITextFieldDelegate {
         
         let total = targetF+targetV+targetG+targetP+targetD
         let currsss = currF+currV+currG+currP+currD
-        let dietLifestyleScore = currsss/Double(total)
+        var dietLifestyleScore = currsss/Double(total)
+        
+        if dietLifestyleScore > 1 {
+            dietLifestyleScore = 1.00
+        }
         print("dietLifestyleScore: ", dietLifestyleScore)
         
         let dataToSave: [String: Any] = ["fruits": fruitPrev+(Int(fruitCal) ?? 0), "vegetables": vegetablePrev+(Int(vegetableCal) ?? 0), "grains": grainPrev+(Int(grainCal) ?? 0), "proteins": proteinPrev+(Int(proteinCal) ?? 0), "dairy": dairyPrev+(Int(dairyCal) ?? 0), "dietLifeScore": dietLifestyleScore]

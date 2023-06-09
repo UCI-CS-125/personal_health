@@ -72,7 +72,11 @@ class SleepViewController: UIViewController {
         let lifeStyleDoc = self.db.collection("lifeStyleData").document(getCurrentDay2())
         
         let hours_slept = Int(hoursText) ?? 0
-        let sleep_score = Double(hours_slept) / 8.00
+        var sleep_score = Double(hours_slept) / 8.00
+        
+        if sleep_score > 1{
+            sleep_score = 1.00
+        }
         
         print(sleep_score)
         
