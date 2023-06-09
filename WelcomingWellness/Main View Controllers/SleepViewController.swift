@@ -25,6 +25,8 @@ class SleepViewController: UIViewController {
     
     let db = Firestore.firestore()
     
+    
+    
     func getCurrentDay () -> String!{
         let date = Date()
         let dateFormatter = DateFormatter()
@@ -41,6 +43,35 @@ class SleepViewController: UIViewController {
         return result
     }
     
+    public var sleepTarget = 0.0
+        
+        func fetchData() {
+            print("func fetchData()")
+            
+            if Auth.auth().currentUser != nil {
+                do {
+                    let ref = db.collection("users").document(try ProfileDataStore.getNameEmailPhotoUrlUID().uid).collection("goals").document("Physical Goals")
+                    
+                    ref.addSnapshotListener { (docSnapshot, error) in
+                        guard let docSnapshot = docSnapshot, docSnapshot.exists else { return }
+                        let myData = docSnapshot.data()
+                        let sleepTarget = Double(myData?["Target Sleep Level"] as? Int ?? 0)
+                        self.processSleepTarget(sleepTarget)
+                    }
+                    
+                } catch let error {
+                    assertionFailure(error.localizedDescription)
+                }
+            } else {
+                assertionFailure("No valid User")
+            }
+        }
+
+        func processSleepTarget(_ sleepTarget: Double) {
+            self.sleepTarget = sleepTarget
+            print("in processSleepTarget", self.sleepTarget)
+        }
+    
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var hoursSleptTextField: UITextField!
     @IBOutlet weak var wakeupHourTextField: UITextField!
@@ -55,6 +86,8 @@ class SleepViewController: UIViewController {
         guard let wakeupHourText = wakeupHourTextField.text, !wakeupHourText.isEmpty else {return}
         guard let wakeupMinText = wakeupMinuteTextField.text, !wakeupMinText.isEmpty else {return}
         let dataToSave: [String: Any] = ["date": dateText, "hours" : (hoursText), "wakeup hour" : wakeupHourText, "wakeup minute" : wakeupMinText]
+        
+        fetchData()
         
 //        docRef.setData(dataToSave) { (error) in
 //            if let error = error {

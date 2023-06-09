@@ -1,9 +1,11 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-A collection view controller that displays charts for mobility health data.
-*/
+//
+//  MobilityChartDataViewController.swift
+//  WelcomingWellness
+//
+//  Copyright © 2023 Apple. All rights reserved.
+//
+//Abstract:
+//A collection view controller that displays charts for mobility health data.
 
 import UIKit
 import HealthKit

@@ -1,9 +1,12 @@
-/*
-See LICENSE folder for this sample’s licensing information.
+//
+//  WelcomeViewController.swift
+//  WelcomingWellness
+//
+//  Copyright © 2023 Apple. All rights reserved.
+//
+//Abstract:
+//A view controller that onboards users to the app.
 
-Abstract:
-A view controller that onboards users to the app.
-*/
 
 import UIKit
 import HealthKit

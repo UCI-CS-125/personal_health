@@ -1,9 +1,12 @@
-/*
-See LICENSE folder for this sample’s licensing information.
+//
+//  WeeklyReportTableViewController.swift
+//  WelcomingWellness
+//
+//  Copyright © 2023 Apple. All rights reserved.
+//
+//Abstract:
+//A table view controller that displays a chart and table view with health data samples.
 
-Abstract:
-A table view controller that displays a chart and table view with health data samples.
-*/
 
 import UIKit
 import HealthKit
