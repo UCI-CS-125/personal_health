@@ -39,8 +39,9 @@ class DashboardViewController: UIViewController {
             let myData = docSnapshot.data()
             let dietScore = myData!["diet"] as? Double ?? 0.0
             let exerciseScore = myData!["exercise"] as? Double ?? 0.0
-            let sum_score = dietScore + exerciseScore
-            let curr_score = sum_score / 2
+            let sleepScore = myData!["sleep"] as? Double ?? 0.0
+            let sum_score = dietScore + exerciseScore + sleepScore
+            let curr_score = sum_score / 3
             self.animatedCountingLabel.text = String(Int(curr_score*100))
             self.setScore = curr_score
             LifestyleView = LifestyleScoreView(frame: .zero)

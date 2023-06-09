@@ -13,6 +13,8 @@ import FirebaseFirestore
 import FirebaseAuth
 import Foundation
 
+
+
 struct Hours: Identifiable {
     var id: String = UUID().uuidString
     var datey: String
@@ -21,11 +23,20 @@ struct Hours: Identifiable {
 
 class SleepViewController: UIViewController {
     
+    let db = Firestore.firestore()
     
     func getCurrentDay () -> String!{
         let date = Date()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd.MM.yyyy"
+        dateFormatter.dateFormat = "dd_MM_yyyy"
+        let result = dateFormatter.string(from: date)
+        return result
+    }
+    
+    func getCurrentDay2 () -> String!{
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM_dd_yyyy"
         let result = dateFormatter.string(from: date)
         return result
     }
@@ -34,11 +45,13 @@ class SleepViewController: UIViewController {
     @IBOutlet weak var hoursSleptTextField: UITextField!
     
     var docRef : DocumentReference!
+    var docRef2 : DocumentReference!
     
     @IBAction func saver(_ sender: UIButton) {
         guard let dateText =  dateTextField.text, !dateText.isEmpty else {return}
         guard let hoursText =  hoursSleptTextField.text, !hoursText.isEmpty else {return}
         let dataToSave: [String: Any] = ["date": dateText, "hours" : (hoursText)]
+        
 //        docRef.setData(dataToSave) { (error) in
 //            if let error = error {
 //                print("OH NO! Error occurred. Here it is: \(error.localizedDescription)")
@@ -54,6 +67,33 @@ class SleepViewController: UIViewController {
                 print("Woohoo! Sleep hours have been stored!")
             }
         }
+        docRef2 = Firestore.firestore().document("lifeStyleData/" + (getCurrentDay2()))
+        
+        let lifeStyleDoc = self.db.collection("lifeStyleData").document(getCurrentDay2())
+        
+        let hours_slept = Int(hoursText) ?? 0
+        let sleep_score = Double(hours_slept) / 8.00
+        
+        print(sleep_score)
+        
+        lifeStyleDoc.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+//                print("Document data: \(dataDescription)")
+            } else {
+                print("Document does not exist")
+                self.db.collection("lifeStyleData").document(self.getCurrentDay2()).setData(["sleep": sleep_score]) { err in
+                        if let err = err {
+                            print("Error writing doc: \(err)")
+                        } else {
+                            print("Doc successfully created")
+                        }
+                    }
+            }
+        }
+        
+        docRef2.updateData(["sleep": sleep_score])
+        
     }
     
     override func viewDidLoad() {
