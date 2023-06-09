@@ -248,21 +248,31 @@ class DietViewController: UIViewController, UITextFieldDelegate {
             let config = MLModelConfiguration()
             let model = try UpdatableKNN(configuration: config)
             let target_calories = self.calcuate_target_cal(gender: "Female", weight: 100, height: 5.6, age: 28, activity: "Moderate exercise (3-5 days/wk)")
-            let prediction = try model.prediction(input: [target_calories,Int.random(in: 10..<30),
-                                                          Int.random(in: 0..<4),
-                                                          Int.random(in: 0..<30),
-                                                          Int.random(in: 0..<400),
-                                                          Int.random(in: 40..<75),
-                                                          Int.random(in: 4..<10),
-                                                          Int.random(in: 0..<10),
-                                                          Int.random(in: 30..<100),])
+            let prediction = try model.prediction(input: MLShapedArray(from:  [target_calories,Int.random(in: 10..<30),
+                                                                      Int.random(in: 0..<4),
+                                                                      Int.random(in: 0..<30),
+                                                                      Int.random(in: 0..<400),
+                                                                      Int.random(in: 40..<75),
+                                                                      Int.random(in: 4..<10),
+                                                                      Int.random(in: 0..<10),
+                                                                                           Int.random(in: 30..<100),] as! Decoder))
+//
+//            let prediction = try model.prediction(input: [target_calories,Int.random(in: 10..<30),
+//                                                          Int.random(in: 0..<4),
+//                                                          Int.random(in: 0..<30),
+//                                                          Int.random(in: 0..<400),
+//                                                          Int.random(in: 40..<75),
+//                                                          Int.random(in: 4..<10),
+//                                                          Int.random(in: 0..<10),
+//                                                          Int.random(in: 30..<100),])
+            
             print(prediction)
         } catch {
             print("Error in prediction")
         }
     }
     
-    func calcuate_target_cal(gender:String, weight:Double, height:Double, age:Int, activity: String){
+    func calcuate_target_cal(gender:String, weight:Double, height:Double, age:Int, activity: String) -> Double{
 
         func calculate_bmr() -> Double{
             var bmr = 0.0
@@ -294,6 +304,7 @@ class DietViewController: UIViewController, UITextFieldDelegate {
             let maintain_calories = calculate_bmr() * weight
             return maintain_calories
         }
+        return calories_calculator()
     }
     
    @IBAction func buttonClicked(_ sender: Any) {
