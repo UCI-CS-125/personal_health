@@ -131,9 +131,12 @@ class ExerciseHeartrateChildVC: DataTypeCollectionViewController {
                     let statisticsQuantity = getStatisticsQuantity(for: statistics, with: statisticsOptions)
                     if let unit = preferredUnit(for: item.dataTypeIdentifier),
                         let value = statisticsQuantity?.doubleValue(for: unit) {
+                        print("heartrate valueEEEE: ", value)
                         values.append(value)
                     }
                 }
+                
+                print("heartrate values: ", values)
                 
                 self.data[index].values = values
                 

@@ -33,24 +33,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Heart Rate" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNw-kc-s5g">
-                                <rect key="frame" x="19.5" y="494" width="173.5" height="51"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccL-3g-Pic">
-                                <rect key="frame" x="19.5" y="553" width="375" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="5lw-Y2-LK3"/>
-                                    <constraint firstAttribute="height" constant="300" id="g2W-Kc-cWO"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="dBp-sz-Jr2" kind="embed" identifier="ToExerciseHeartrateChildVC" id="EhC-uO-ZkD"/>
-                                </connections>
-                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hxu-Z1-De5">
-                                <rect key="frame" x="20" y="167" width="375" height="300"/>
+                                <rect key="frame" x="20" y="167" width="375" height="353"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="Xy1-uV-OmU"/>
                                     <constraint firstAttribute="width" constant="375" id="eUv-df-18V"/>
@@ -59,22 +43,26 @@
                                     <segue destination="vN4-Ab-9Ka" kind="embed" identifier="ToExerciseFirstChildVC" id="xLR-Jp-8AG"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brg-8s-JXx">
+                                <rect key="frame" x="120" y="660" width="176" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Enable Notifications"/>
+                                <connections>
+                                    <segue destination="WiJ-Yd-rba" kind="show" destinationCreationSelector="notifsSegue:" id="TJR-jP-kVo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wK1-Qd-b7c"/>
                         <color key="backgroundColor" red="0.6411464214" green="0.78259307150000001" blue="0.87452346089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="a1v-pb-mvn" firstAttribute="top" secondItem="Nks-Df-1rs" secondAttribute="topMargin" constant="-44" id="1zV-7z-nXU"/>
-                            <constraint firstItem="ccL-3g-Pic" firstAttribute="leading" secondItem="xNw-kc-s5g" secondAttribute="leading" id="2DS-qc-hvE"/>
                             <constraint firstItem="Hxu-Z1-De5" firstAttribute="top" secondItem="vcl-cL-j7Y" secondAttribute="bottom" constant="8" id="EKA-hs-B93"/>
-                            <constraint firstItem="ccL-3g-Pic" firstAttribute="leading" secondItem="vcl-cL-j7Y" secondAttribute="leading" id="H2q-fm-4Tz"/>
                             <constraint firstItem="a1v-pb-mvn" firstAttribute="centerX" secondItem="Nks-Df-1rs" secondAttribute="centerX" id="LzU-kb-fap"/>
                             <constraint firstItem="vcl-cL-j7Y" firstAttribute="top" secondItem="a1v-pb-mvn" secondAttribute="bottom" constant="48" id="MzW-4A-vR2"/>
-                            <constraint firstItem="ccL-3g-Pic" firstAttribute="top" secondItem="xNw-kc-s5g" secondAttribute="bottom" constant="8" symbolic="YES" id="UnN-hj-NyY"/>
                             <constraint firstItem="wK1-Qd-b7c" firstAttribute="trailing" secondItem="vcl-cL-j7Y" secondAttribute="trailing" constant="210" id="dcT-0V-sjU"/>
                             <constraint firstItem="vcl-cL-j7Y" firstAttribute="leading" secondItem="Hxu-Z1-De5" secondAttribute="leading" id="iMK-FZ-Hc8"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="ccL-3g-Pic" secondAttribute="bottom" constant="-40" id="mGs-98-YN9"/>
                             <constraint firstItem="a1v-pb-mvn" firstAttribute="leading" secondItem="wK1-Qd-b7c" secondAttribute="leading" constant="60" id="uOU-aj-WuY"/>
-                            <constraint firstItem="xNw-kc-s5g" firstAttribute="top" secondItem="Hxu-Z1-De5" secondAttribute="bottom" constant="8" id="v4e-cJ-rH8"/>
                             <constraint firstItem="a1v-pb-mvn" firstAttribute="centerX" secondItem="Hxu-Z1-De5" secondAttribute="centerX" id="wpl-qq-d0e"/>
                         </constraints>
                     </view>
@@ -656,7 +644,7 @@
             <objects>
                 <viewController id="vN4-Ab-9Ka" customClass="MobilityChartDataViewController" customModule="WelcomingWellness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7rb-DF-wRo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="353"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="kkc-gT-dCr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -664,22 +652,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U7P-rs-aN7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-107" y="-772"/>
+            <point key="canvasLocation" x="-143" y="-873"/>
         </scene>
-        <!--Exercise Heartrate ChildVC-->
-        <scene sceneID="tss-RA-0jF">
+        <!--Hosting Controller-->
+        <scene sceneID="wx2-9g-TiE">
             <objects>
-                <viewController id="dBp-sz-Jr2" customClass="ExerciseHeartrateChildVC" customModule="WelcomingWellness" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZlY-Ki-sYT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="2B0-uS-bCD"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mDT-pO-uh8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <hostingController id="WiJ-Yd-rba" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FZz-i2-tq4"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oi3-MW-OSn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-107" y="-492"/>
+            <point key="canvasLocation" x="612" y="-682"/>
         </scene>
         <!--Today's Meals-->
         <scene sceneID="LsA-D2-c5p">
