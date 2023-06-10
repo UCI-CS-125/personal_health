@@ -149,7 +149,7 @@ class SleepViewController: UIViewController {
             sleepTime = Double(number) - sleepTime
             let mini = (sleepTime/60)
             let houry = Int(mini/60)
-            let pred = String(houry) + ":" + String(Int(mini-(Double(houry*60)))) + " PM"
+            let pred = String(houry) + ":" + String(Int(mini-(Double(houry*60))))
             print("prediction: ", sleepTime, "; ", "pred: ", pred)
             docRef = Firestore.firestore().document("recommendationsData/" + (getCurrentDay2()))
             let recsDoc = self.db.collection("recommendationsData").document(getCurrentDay2())

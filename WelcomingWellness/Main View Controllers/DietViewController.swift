@@ -75,8 +75,6 @@ class DietViewController: UIViewController, UITextFieldDelegate {
    }
    
    
-   
-   
    func fetchData() {
        print("func fetchData()")
        docRef = Firestore.firestore().document("dietData/" + (getCurrentDay()))
@@ -90,10 +88,8 @@ class DietViewController: UIViewController, UITextFieldDelegate {
            self.proteinPrev = myData!["proteins"] as? Int ?? 0
            self.dairyPrev = myData!["dairy"] as? Int ?? 0
        }
-       print("testing")
        if Auth.auth().currentUser != nil {
            do {
-               print("yello")
                let ref = db.collection("users").document(try ProfileDataStore.getNameEmailPhotoUrlUID().uid).collection("goals").document("Physical Goals")
                
                ref.addSnapshotListener { (docSnapshot, error) in
@@ -127,7 +123,6 @@ class DietViewController: UIViewController, UITextFieldDelegate {
        
        let tap = UITapGestureRecognizer(target: self, action: #selector(SleepViewController.dismissKeyboard))
        view.addGestureRecognizer(tap)
-       
    }
    
    @objc override func dismissKeyboard() {
@@ -135,7 +130,6 @@ class DietViewController: UIViewController, UITextFieldDelegate {
    }
    
    public var calorieTarget = 0.0
-   
    
 
    func processCalorieTarget(_ calorieTarget: Double) {
@@ -180,15 +174,12 @@ class DietViewController: UIViewController, UITextFieldDelegate {
            }
        }
        
-       
-       
        guard let fruitCal = fruit.text, !fruitCal.isEmpty else {return}
        guard let vegetableCal = vegetable.text, !vegetableCal.isEmpty else {return}
        guard let grainCal = grain.text, !grainCal.isEmpty else {return}
        guard let proteinCal = protein.text, !proteinCal.isEmpty else {return}
        guard let dairyCal = dairy.text, !dairyCal.isEmpty else {return}
        
-       //getTargets(self.calorieTarget)
        var d = false
        for (cal, servings) in dietDict {
            if d == false {
@@ -229,31 +220,30 @@ class DietViewController: UIViewController, UITextFieldDelegate {
            }
        }
        
-       
-       /*let dataToSave2: [String: Any] = ["diet": dietLifestyleScore]
-        docRef2.setData(dataToSave2) { (error) in
-        if let error = error {
-        print("errror: \(error.localizedDescription)")
-        } else {
-        print("Diet Data has been saved")
-        }
-        }
-        }*/
-       
        docRef2.updateData(["diet": dietLifestyleScore])
-       getRecommendation()
+       getRecommendation(calorieTarget)
    }
    
-    func getRecommendation() {
+    func getRecommendation(_ calorieTarget: Double) {
         do {
             let config = MLModelConfiguration()
             let model = try DietRec(configuration: config)
-            let target_calories = self.calcuate_target_cal(gender: "Female", weight: 100, height: 5.6, age: 28, activity: "Moderate exercise (3-5 days/wk)")
-            
-            
-            let prediction = try model.prediction(input: DietRecInput(Serving: "1 roll (140 g)" , Calories: String(target_calories)))
-            print("this is the prediction")
-            print(prediction.Food)
+            let target_calories = self.calcuate_target_cal(gender: "Female", weight: Double.random(in: 95 ..< 140), height: Double.random(in: 5 ..< 7), age: Int.random(in: 18 ..< 30), activity: "Moderate exercise (3-5 days/wk)")
+            let r = Int.random(in: 1 ..< 1000)
+            let s = "(" + String(r) + " g)"
+            let x = String(Int.random(in: 1 ..< 2000)) + " cal"
+            print("servings: ", s)
+            print("calories: ", x)
+            var prediction = try model.prediction(input: DietRecInput(Serving: s , Calories: x))
+            while (prediction.Food == "Artichoke") {
+                let r = Int.random(in: 1 ..< 1000)
+                let s = "(" + String(r) + " g)"
+                let x = String(Int.random(in: 1 ..< 2000)) + " cal"
+                print("servings: ", s)
+                print("calories: ", x)
+                prediction = try model.prediction(input: DietRecInput(Serving: s , Calories: x))
+            }
+            print("this is the prediction: ", prediction.Food)
             
             docRef = Firestore.firestore().document("recommendationsData/" + (getCurrentDay()))
             let recsDoc = self.db.collection("recommendationsData").document(getCurrentDay())
@@ -317,8 +307,6 @@ class DietViewController: UIViewController, UITextFieldDelegate {
    @IBAction func buttonClicked(_ sender: Any) {
        print("Button tapped")
        fetchData()
-       
-       
    }
    
    func textFieldShouldReturn(_ textField: UITextField) -> Bool {

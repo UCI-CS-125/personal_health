@@ -66,7 +66,7 @@ class DashboardViewController: UIViewController {
         docRef.addSnapshotListener { [self] (docSnapshot, error) in
             guard let docSnapshot = docSnapshot, docSnapshot.exists else { return }
             let myData = docSnapshot.data()
-            let sleepRec = myData!["sleepRec"] as? String ?? "9:00 PM"
+            let sleepRec = myData!["sleepRec"] as? String ?? "21:00"
             self.recommendationsLabel.text = "Recommended sleep time for " + String(getNextDate()) + ": " + sleepRec
             print("sleepRec: ", sleepRec)
         }
@@ -75,7 +75,7 @@ class DashboardViewController: UIViewController {
             guard let docSnapshot = docSnapshot, docSnapshot.exists else { return }
             let myData = docSnapshot.data()
             let foodREC = myData!["food rec"] as? String ?? "Thin Crust Pizza"
-            self.foodRecLabel.text = "Try eating " + String(getNextDate()) + ": " + foodREC
+            self.foodRecLabel.text = "Recommended meal for " + String(getNextDate()) + ": " + foodREC
             print("foodREC: ", foodREC)
         }
         
