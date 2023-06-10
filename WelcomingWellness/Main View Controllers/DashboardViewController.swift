@@ -34,6 +34,9 @@ class DashboardViewController: UIViewController {
     
     @IBOutlet weak var recommendationsLabel: UILabel!
     
+    @IBOutlet weak var foodRecLabel: UILabel!
+    
+    
     var LifestyleView: LifestyleScoreView!
     var LifestyleViewDuration: TimeInterval = 2
     var setScore: Double = 0.50
@@ -67,6 +70,16 @@ class DashboardViewController: UIViewController {
             self.recommendationsLabel.text = "Recommended sleep time for " + String(getNextDate()) + ": " + sleepRec
             print("sleepRec: ", sleepRec)
         }
+        
+        docRef.addSnapshotListener { [self] (docSnapshot, error) in
+            guard let docSnapshot = docSnapshot, docSnapshot.exists else { return }
+            let myData = docSnapshot.data()
+            let foodREC = myData!["food rec"] as? String ?? "Thin Crust Pizza"
+            self.foodRecLabel.text = "Try eating " + String(getNextDate()) + ": " + foodREC
+            print("foodREC: ", foodREC)
+        }
+        
+        
     }
     
     override func viewDidLoad() {

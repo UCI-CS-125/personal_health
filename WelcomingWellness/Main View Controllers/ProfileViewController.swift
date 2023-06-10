@@ -16,9 +16,9 @@ class ProfileViewController: UITableViewController {
   private enum ProfileSection: Int {
       case ageSexBloodType
       case weightHeightBMI
-      case goals
+//      case goals
 //      case readHealthKitData
-      case saveBMI
+//      case saveBMI
       case signout
       
   }
@@ -298,15 +298,10 @@ class ProfileViewController: UITableViewController {
 //    print("this is called", indexPath)
       print(section)
     switch section {
-    case .saveBMI:
-      saveBodyMassIndexToHealthKit()
-//    case .readHealthKitData:
-//      updateHealthInfo()
+
     case .signout:
         print("button pressed")
         signUserOut()
-    case .goals:
-        break
     default: break
     }
   }

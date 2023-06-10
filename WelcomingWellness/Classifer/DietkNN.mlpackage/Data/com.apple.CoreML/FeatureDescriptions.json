@@ -1,0 +1,23 @@
+{
+  "Outputs" : {
+    "outputProbs" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "output" : {
+      "MLFeatureShortDescription" : "Recipe A string value"
+    }
+  },
+  "Inputs" : {
+    "input" : {
+      "MLFeatureShortDescription" : "An array of 9 doubles — ['Calories','FatContent','SaturatedFatContent','CholesterolContent','SodiumContent','CarbohydrateContent','FiberContent','SugarContent','ProteinContent']"
+    }
+  },
+  "TrainingInputs" : {
+    "input" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "output" : {
+      "MLFeatureShortDescription" : ""
+    }
+  }
+}

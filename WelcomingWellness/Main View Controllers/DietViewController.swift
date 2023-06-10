@@ -90,9 +90,10 @@ class DietViewController: UIViewController, UITextFieldDelegate {
            self.proteinPrev = myData!["proteins"] as? Int ?? 0
            self.dairyPrev = myData!["dairy"] as? Int ?? 0
        }
-       
+       print("testing")
        if Auth.auth().currentUser != nil {
            do {
+               print("yello")
                let ref = db.collection("users").document(try ProfileDataStore.getNameEmailPhotoUrlUID().uid).collection("goals").document("Physical Goals")
                
                ref.addSnapshotListener { (docSnapshot, error) in
@@ -240,33 +241,39 @@ class DietViewController: UIViewController, UITextFieldDelegate {
         }*/
        
        docRef2.updateData(["diet": dietLifestyleScore])
-//       getRecommendation()
+       getRecommendation()
    }
    
     func getRecommendation() {
         do {
             let config = MLModelConfiguration()
-            let model = try UpdatableKNN(configuration: config)
+            let model = try DietRec(configuration: config)
             let target_calories = self.calcuate_target_cal(gender: "Female", weight: 100, height: 5.6, age: 28, activity: "Moderate exercise (3-5 days/wk)")
-            let prediction = try model.prediction(input: MLShapedArray(from:  [target_calories,Int.random(in: 10..<30),
-                                                                      Int.random(in: 0..<4),
-                                                                      Int.random(in: 0..<30),
-                                                                      Int.random(in: 0..<400),
-                                                                      Int.random(in: 40..<75),
-                                                                      Int.random(in: 4..<10),
-                                                                      Int.random(in: 0..<10),
-                                                                                           Int.random(in: 30..<100),] as! Decoder))
-//
-//            let prediction = try model.prediction(input: [target_calories,Int.random(in: 10..<30),
-//                                                          Int.random(in: 0..<4),
-//                                                          Int.random(in: 0..<30),
-//                                                          Int.random(in: 0..<400),
-//                                                          Int.random(in: 40..<75),
-//                                                          Int.random(in: 4..<10),
-//                                                          Int.random(in: 0..<10),
-//                                                          Int.random(in: 30..<100),])
             
-            print(prediction)
+            
+            let prediction = try model.prediction(input: DietRecInput(Serving: "1 roll (140 g)" , Calories: String(target_calories)))
+            print("this is the prediction")
+            print(prediction.Food)
+            
+            docRef = Firestore.firestore().document("recommendationsData/" + (getCurrentDay()))
+            let recsDoc = self.db.collection("recommendationsData").document(getCurrentDay())
+            recsDoc.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                    self.docRef.updateData(["food rec": prediction.Food])
+                } else {
+                    print("Document does not exist")
+                    self.db.collection("recommendationsData").document(self.getCurrentDay()).setData(["food rec": prediction.Food]) { err in
+                            if let err = err {
+                                print("Error writing doc: \(err)")
+                            } else {
+                                print("Doc successfully created")
+                            }
+                        }
+                }
+            }
+            
+            
         } catch {
             print("Error in prediction")
         }

@@ -1,0 +1,24 @@
+{
+    "fileFormatVersion": "1.0.0",
+    "itemInfoEntries": {
+        "16E0708E-08D9-4256-8D8E-01C1F2258D38": {
+            "author": "com.apple.CoreML",
+            "description": "External Metadata Overlay",
+            "name": "Metadata.json",
+            "path": "com.apple.CoreML/Metadata.json"
+        },
+        "1CCD6488-8CF2-41B8-B7C0-8CDB5B37310E": {
+            "author": "com.apple.CoreML",
+            "description": "External FeatureDescription Overlay",
+            "name": "FeatureDescriptions.json",
+            "path": "com.apple.CoreML/FeatureDescriptions.json"
+        },
+        "C1ADE34F-8F4E-4171-A14F-E4BA7E42C2F0": {
+            "author": "com.apple.CoreML",
+            "description": "CoreML Model Specification",
+            "name": "DietkNN.mlmodel",
+            "path": "com.apple.CoreML/DietkNN.mlmodel"
+        }
+    },
+    "rootModelIdentifier": "C1ADE34F-8F4E-4171-A14F-E4BA7E42C2F0"
+}

@@ -1,0 +1,6 @@
+{
+  "MLModelVersionStringKey" : "--",
+  "MLModelDescriptionKey" : "Classifies 9 dimension vector based on 5 nearest neighbors",
+  "MLModelAuthorKey" : "Jason",
+  "MLModelLicenseKey" : "--"
+}

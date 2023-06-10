@@ -182,10 +182,10 @@ class MobilityChartDataViewController: DataTypeCollectionViewController {
                 }
 //                let sum = values.reduce(0, +)
 //                print("total dist ", sum)
-                let today_dist = values.last
+                let today_dist = values.last ?? 0
 //                print("today_dist", today_dist)
                 let meters_to_walk = 3218.69
-                var get_exercise_score_daily = today_dist! / meters_to_walk
+                var get_exercise_score_daily = today_dist / meters_to_walk
                 print("get_exercise_score_daily", get_exercise_score_daily)
                 if get_exercise_score_daily > 1 {
                     get_exercise_score_daily = 1.00
