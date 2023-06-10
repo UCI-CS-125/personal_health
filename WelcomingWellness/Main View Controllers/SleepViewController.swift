@@ -85,6 +85,7 @@ class SleepViewController: UIViewController {
         }
         
         print("sleep_score: ", sleep_score)
+        docRef2.updateData(["sleep": sleep_score])
         
         lifeStyleDoc.getDocument { (document, error) in
             if let document = document, document.exists {
